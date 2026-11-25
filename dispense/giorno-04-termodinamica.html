@@ -38,8 +38,8 @@
       <ul>
         <li><b>Scale termometriche:</b> <span class="math"><b>T(K) = t(°C) + 273,15</b></span>. Lo zero assoluto (0 K = −273,15 °C) è la temperatura minima possibile. Attenzione: una <i>variazione</i> di temperatura è identica in °C e in K (<span class="math">ΔT = Δt</span>)!</li>
         <li><b>Principio Zero:</b> se A è in equilibrio termico con C e B è in equilibrio con C, allora A e B hanno la stessa temperatura.</li>
-        <li><b>Dilatazione termica lineare:</b> <span class="math">ΔL = L<sub>0</sub> · λ · ΔT</span>.</li>
-        <li><b>Trasmissione del calore:</b> <b>Conduzione</b> (contatto nei solidi, legge di Fourier), <b>Convezione</b> (movimento di fluidi caldi/freddi), <b>Irraggiamento</b> (onde EM infrarosse, avviene anche nel vuoto, legge di Stefan-Boltzmann <span class="math">P ∝ T⁴</span>).</li>
+        <li><b>Dilatazione termica lineare:</b> <span class="math">ΔL = L<sub>0</sub> · α · ΔT</span> (α = coeff. di dilatazione lineare).</li>
+        <li><b>Trasmissione del calore:</b> <b>Conduzione</b> (contatto nei solidi, legge di Fourier), <b>Convezione</b> (movimento di fluidi caldi/freddi), <b>Irraggiamento</b> (onde EM, soprattutto infrarosse a temperatura ambiente; avviene anche nel vuoto, legge di Stefan-Boltzmann <span class="math">P ∝ T⁴</span>).</li>
       </ul>
 
       <div class="formula-grid">
@@ -70,7 +70,7 @@
         <div class="formula-card">
           <div class="f-name">Legge combinata (n costante)</div>
           <div class="f-eq"><span class="frac"><span>P<sub>1</sub>V<sub>1</sub></span><span>T<sub>1</sub></span></span> = <span class="frac"><span>P<sub>2</sub>V<sub>2</sub></span><span>T<sub>2</sub></span></span></div>
-          <div class="f-note"><b>Boyle</b> (T cost.): PV = cost.<br/><b>Charles/Gay-Lussac</b>: V/T = cost. (P cost.) | P/T = cost. (V cost.).</div>
+          <div class="f-note"><b>Boyle</b> (T cost.): PV = cost.<br/><b>Charles / 1ª Gay-Lussac</b> (P cost.): V/T = cost. &nbsp;|&nbsp; <b>2ª Gay-Lussac</b> (V cost.): P/T = cost.</div>
         </div>
       </div>
 
@@ -99,8 +99,8 @@
       <ul>
         <li><b>Enunciato di Kelvin-Planck:</b> impossibile realizzare una macchina termica ciclica che trasformi <i>tutto</i> il calore assorbito in lavoro (rendimento sempre &lt; 100%).</li>
         <li><b>Enunciato di Clausius:</b> il calore non passa mai spontaneamente da un corpo freddo a uno caldo.</li>
-        <li><b>Rendimento di una macchina termica:</b> <span class="math"><b>η = W / Q<sub>ass</sub> = 1 − Q<sub>ced</sub>/Q<sub>ass</sub></b></span>. Il rendimento massimo teorico (<b>macchina di Carnot</b>) è: <span class="math"><b>η<sub>Carnot</sub> = 1 − T<sub>C</sub> / T<sub>H</sub></b></span> (con T in Kelvin!).</li>
-        <li><b>Entropia (S):</b> misura il disordine/irreversibilità (<span class="math">ΔS = Q<sub>rev</sub> / T</span>, in J/K). In un sistema isolato <span class="math">ΔS ≥ 0</span>. Gli <b>organismi viventi</b> sono <b>sistemi aperti</b>: mantengono ordine interno (ΔS locale &lt; 0) solo aumentando l'entropia dell'ambiente (cedendo calore e scarti).</li>
+        <li><b>Rendimento di una macchina termica:</b> <span class="math"><b>η = W / Q<sub>ass</sub> = 1 − |Q<sub>ced</sub>|/Q<sub>ass</sub></b></span>. Il rendimento massimo teorico (<b>macchina di Carnot</b>) è: <span class="math"><b>η<sub>Carnot</sub> = 1 − T<sub>C</sub> / T<sub>H</sub></b></span> (con T in Kelvin!).</li>
+        <li><b>Entropia (S):</b> misura il disordine/irreversibilità (per una trasformazione isoterma reversibile: <span class="math">ΔS = Q<sub>rev</sub> / T</span>, in J/K). In un sistema isolato <span class="math">ΔS ≥ 0</span>. Gli <b>organismi viventi</b> sono <b>sistemi aperti</b>: mantengono ordine interno (ΔS locale &lt; 0) solo aumentando l'entropia dell'ambiente (cedendo calore e scarti).</li>
       </ul>
 
       <h2>5. Esercizi svolti passo-passo</h2>
@@ -129,7 +129,7 @@
       <div class="example">
         <div class="example-q">Esempio 4 (Rendimento di Carnot): Qual è il rendimento massimo di una macchina termica che opera tra 27 °C e 327 °C?</div>
         <div class="example-sol">
-          <b>Svolgimento:</b> Converto subito in Kelvin! T<sub>C</sub> = 27 + 273 = 300 K; T<sub>H</sub> = 327 + 273 = 600 K. Rendimento: η = 1 − (300/600) = 1 − 0,5 = <b>0,50 (50%)</b>.
+          <b>Svolgimento:</b> Converto subito in Kelvin (usando 0 °C ≈ 273 K): T<sub>C</sub> = 27 + 273 = 300 K; T<sub>H</sub> = 327 + 273 = 600 K. Rendimento: η = 1 − (300/600) = 1 − 0,5 = <b>0,50 (50%)</b>.
         </div>
       </div>
 
@@ -188,7 +188,7 @@
             <li class="quiz-opt" data-val="c">C) Si dimezza</li>
             <li class="quiz-opt" data-val="d">D) Rimane invariata</li>
           </ul>
-          <div class="quiz-exp"><b>Spiegazione:</b> In Kelvin: T<sub>1</sub> = 300 K, T<sub>2</sub> = 600 K. Poiché P/T = cost., se T raddoppia anche la pressione <b>raddoppia</b>.</div>
+          <div class="quiz-exp"><b>Spiegazione:</b> In Kelvin (0 °C ≈ 273 K): T<sub>1</sub> = 300 K, T<sub>2</sub> = 600 K. Poiché P/T = cost., se T raddoppia anche la pressione <b>raddoppia</b>.</div>
         </div>
 
         <div class="quiz-card" data-type="fill" data-answer="310|310.15">

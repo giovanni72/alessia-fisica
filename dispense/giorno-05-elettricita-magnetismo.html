@@ -38,7 +38,7 @@
       <ul>
         <li><b>Carica elettrica (q):</b> misurata in <b>Coulomb (C)</b>. È quantizzata (multipli di <span class="math">e = 1,6 × 10⁻¹⁹ C</span>) e si conserva. Cariche dello stesso segno si respingono, di segno opposto si attraggono.</li>
         <li><b>Campo elettrico (E):</b> forza per unità di carica (<span class="math">E = F/q</span>, in N/C o V/m). Esce dalle cariche positive ed entra in quelle negative.</li>
-        <li><b>Potenziale elettrico (V):</b> energia potenziale per unità di carica (<span class="math">V = U/q</span>, in <b>Volt: 1 V = 1 J/C</b>). Il lavoro per spostare una carica <i>q</i> attraverso ΔV è <span class="math"><b>W = q · ΔV</b></span>.</li>
+        <li><b>Potenziale elettrico (V):</b> energia potenziale per unità di carica (<span class="math">V = U/q</span>, in <b>Volt: 1 V = 1 J/C</b>). Il lavoro della forza elettrica per spostare <i>q</i> da A a B è <span class="math"><b>W<sub>A→B</sub> = q(V<sub>A</sub> − V<sub>B</sub>) = −q·ΔV</b></span> (in modulo <span class="math">|W| = |q·ΔV|</span>).</li>
       </ul>
 
       <div class="formula-grid">
@@ -49,8 +49,8 @@
         </div>
         <div class="formula-card">
           <div class="f-name">Campo uniforme &amp; Lavoro</div>
-          <div class="f-eq">E = <span class="frac"><span>ΔV</span><span>d</span></span> &nbsp;|&nbsp; W = q·ΔV</div>
-          <div class="f-note">Tra due armature parallele a distanza <i>d</i>.</div>
+          <div class="f-eq">E = <span class="frac"><span>|ΔV|</span><span>d</span></span> &nbsp;|&nbsp; |W| = |q·ΔV|</div>
+          <div class="f-note">Tra due armature parallele a distanza <i>d</i>. Forza el.: W<sub>A→B</sub> = q(V<sub>A</sub>−V<sub>B</sub>).</div>
         </div>
         <div class="formula-card">
           <div class="f-name">Condensatore Piano</div>
@@ -104,14 +104,18 @@
       </table>
 
       <div class="box trap">
-        <span class="box-title">Trucco salva-tempo per 2 resistenze in parallelo</span>
-        Invece di fare le frazioni, usa sempre: <span class="math"><b>R<sub>eq</sub> = (R<sub>1</sub> · R<sub>2</sub>) / (R<sub>1</sub> + R<sub>2</sub>)</b></span>! E se hai <i>N</i> resistenze uguali di valore <i>R</i> in parallelo, semplicemente <span class="math"><b>R<sub>eq</sub> = R / N</b></span> (es. due resistenze da 10 Ω in parallelo danno 5 Ω). Nota che per i condensatori le formule serie/parallelo sono <b>esattamente opposte</b>!
+        <span class="box-title">Trucco salva-tempo, Leggi di Kirchhoff e Sicurezza Elettrica</span>
+        <ul>
+          <li><b>2 resistenze in parallelo:</b> usa subito <span class="math"><b>R<sub>eq</sub> = (R<sub>1</sub>·R<sub>2</sub>) / (R<sub>1</sub> + R<sub>2</sub>)</b></span>! Con <i>N</i> resistenze uguali in parallelo: <span class="math"><b>R<sub>eq</sub> = R / N</b></span>. Per i condensatori le formule serie/parallelo sono <b>opposte</b>.</li>
+          <li><b>Leggi di Kirchhoff:</b> (1) <i>Legge dei nodi</i> (conservazione carica): la somma delle correnti entranti in un nodo è uguale alla somma delle uscenti (<span class="math">ΣI<sub>in</sub> = ΣI<sub>out</sub></span>); (2) <i>Legge delle maglie</i> (conservazione energia): in un percorso chiuso <span class="math">ΣΔV = 0</span>.</li>
+          <li><b>Sicurezza elettrica (clinica):</b> ciò che uccide è la <b>corrente I</b> (non solo la tensione)! Già ~50–100 mA in corrente alternata attraverso il torace possono causare <b>fibrillazione ventricolare</b>; la pelle bagnata abbatte la resistenza da ~100 kΩ a ~1 kΩ moltiplicando il rischio!</li>
+        </ul>
       </div>
 
       <h2>3. Magnetismo e Induzione Elettromagnetica</h2>
       <ul>
         <li><b>Campo magnetico (B):</b> si misura in <b>Tesla (T)</b>. I poli magnetici Nord e Sud sono inseparabili (non esistono monopoli magnetici). Le correnti elettriche generano campi magnetici (es. filo rettilineo, bobine della <b>Risonanza Magnetica – RMN</b>, che usa campi da 1,5–3 T!).</li>
-        <li><b>Forza di Lorentz:</b> su una carica <i>q</i> in movimento con velocità <i>v</i> in un campo <i>B</i>: <span class="math"><b>F = q · v · B · sinθ</b></span>. Se la carica è ferma (v = 0) o parallela a B (θ = 0°), <b>F = 0</b>! Poiché F è sempre perpendicolare a <i>v</i>, <b>la forza magnetica NON compie lavoro</b> (curva la traiettoria ma non cambia il modulo della velocità).</li>
+        <li><b>Forza di Lorentz (componente magnetica):</b> su una carica <i>q</i> in movimento con velocità <i>v</i> in un campo <i>B</i>: <span class="math"><b>F = |q| · v · B · sinθ</b></span> (in presenza anche di campo elettrico: <span class="math"><b>F</b> = q(<b>E</b> + <b>v</b> × <b>B</b>)</span>). Se la carica è ferma (v = 0) o parallela/antiparallela a B (θ = 0° o 180°), <b>F = 0</b>! Poiché la forza magnetica è sempre perpendicolare a <i>v</i>, <b>NON compie lavoro</b> (curva la traiettoria ma non cambia il modulo della velocità).</li>
         <li><b>Forza su un filo percorso da corrente:</b> <span class="math"><b>F = I · L · B · sinθ</b></span>.</li>
         <li><b>Induzione elettromagnetica (Faraday-Neumann-Lenz):</b> una <b>variazione</b> nel tempo del flusso del campo magnetico genera una forza elettromotrice indotta: <span class="math"><b>f.e.m. = − ΔΦ(B) / Δt</b></span>. Il segno meno (legge di Lenz) indica che la corrente indotta si oppone alla variazione che l'ha generata.</li>
       </ul>
@@ -133,7 +137,7 @@
       </div>
 
       <div class="example">
-        <div class="example-q">Esempio 3 (Effetto Joule): Un elettrobisturi assorbe 2 A sotto una tensione di 100 V per 5 secondi. Quale potenza sviluppa e quanta energia termica libera?</div>
+        <div class="example-q">Esempio 3 (Effetto Joule): Un elettrobisturi (modello resistivo) lavora con corrente efficace di 2 A sotto una tensione efficace di 100 V per 5 secondi. Quale potenza sviluppa e quanta energia termica libera?</div>
         <div class="example-sol">
           <b>Svolgimento:</b> P = ΔV · I = 100 · 2 = <b>200 W</b>. Energia: E = P · t = 200 · 5 = <b>1000 J (1 kJ)</b>.
         </div>
@@ -172,14 +176,14 @@
         </div>
 
         <div class="quiz-card" data-type="mc" data-answer="b">
-          <div class="quiz-q">3. Un filo conduttore viene allungato fino a raddoppiare la sua lunghezza L, mantenendo uguale la sezione S. La sua resistenza R:</div>
+          <div class="quiz-q">3. Confrontando due fili dello stesso materiale e della stessa sezione S, uno lungo il doppio dell'altro (2L), la resistenza R del filo più lungo:</div>
           <ul class="quiz-options">
-            <li class="quiz-opt" data-val="a">A) Si dimezza</li>
-            <li class="quiz-opt" data-val="b">B) Raddoppia</li>
-            <li class="quiz-opt" data-val="c">C) Quadruplica</li>
-            <li class="quiz-opt" data-val="d">D) Resta invariata</li>
+            <li class="quiz-opt" data-val="a">A) È la metà</li>
+            <li class="quiz-opt" data-val="b">B) È il doppio</li>
+            <li class="quiz-opt" data-val="c">C) È il quadruplo</li>
+            <li class="quiz-opt" data-val="d">D) È uguale</li>
           </ul>
-          <div class="quiz-exp"><b>Spiegazione:</b> Per la 2ª legge di Ohm (R = ρL/S), R è direttamente proporzionale a L ⇒ <b>raddoppia</b>.</div>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per la 2ª legge di Ohm (R = ρL/S), a parità di ρ e S la resistenza è direttamente proporzionale a L ⇒ <b>è il doppio</b>. <i>(Attenzione: se invece un unico filo venisse stirato a volume costante fino a raddoppiare L, la sezione S si dimezzerebbe e R quadruplicherebbe!)</i></div>
         </div>
 
         <div class="quiz-card" data-type="mc" data-answer="d">

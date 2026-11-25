@@ -1,5 +1,5 @@
 /* ============================================================
-   Motore interattivo Quiz + Timer Simulazione + Progressi
+   Motore interattivo Quiz + Timer Simulazione (45 min MUR) + Progressi
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -65,11 +65,16 @@ function initQuizzes() {
           const accepted = (card.dataset.answer || "")
             .split("|")
             .map((s) => normalizeStr(s));
-          const val = normalizeStr(input ? input.value : "");
+          const rawVal = input ? input.value : "";
+          const val = normalizeStr(rawVal);
+
           if (!val) {
             omitted++;
-            if (input) input.style.borderColor = "#94a3b8";
-          } else if (accepted.includes(val)) {
+            if (input) {
+              input.style.borderColor = "#94a3b8";
+              input.style.background = "";
+            }
+          } else if (isFillCorrect(val, accepted)) {
             correct++;
             if (input) {
               input.style.borderColor = "#15803d";
@@ -88,12 +93,18 @@ function initQuizzes() {
       const total = cards.length;
       if (banner) {
         if (isSim) {
-          const murScore = (correct * 1 - wrong * 0.25).toFixed(2);
+          const murNum = correct * 1 - wrong * 0.1;
+          const murScore = murNum.toFixed(1).replace(".", ",");
           const pct = Math.round((correct / total) * 100);
+          let esito = "";
+          if (murNum >= 31) esito = `<span style="color:#15803d;">SUPERATO — 30 e Lode!</span>`;
+          else if (murNum >= 18) esito = `<span style="color:#15803d;">SUPERATO (soglia ≥ 18/30)</span>`;
+          else esito = `<span style="color:#b91c1c;">Non superato (soglia minima 18/30)</span>`;
+
           banner.innerHTML =
-            `Risultato Simulazione: <strong>${correct}/${total}</strong> corrette (${pct}%), ` +
+            `Risultato Simulazione MUR: <strong>${correct}/${total}</strong> corrette (${pct}%), ` +
             `<strong>${wrong}</strong> errate, <strong>${omitted}</strong> omesse — ` +
-            `Punteggio stile MUR (+1 / −0,25): <strong>${murScore} / ${total}</strong>`;
+            `Punteggio (+1 / −0,1): <strong>${murScore} / 31</strong> · ${esito}`;
         } else {
           const pct = Math.round((correct / total) * 100);
           banner.innerHTML =
@@ -140,8 +151,31 @@ function normalizeStr(s) {
   return String(s || "")
     .trim()
     .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/,/g, ".")
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g, " ")
+    .replace(/\s+%/g, "%");
+}
+
+function isFillCorrect(val, accepted) {
+  if (accepted.includes(val)) return true;
+  // Se la risposta attesa è numerica, accetta anche eventuali unità scritte accanto (es. "30 m/s", "40%", "30.0")
+  const numericAccepted = accepted
+    .map((a) => a.replace(/%$/, ""))
+    .filter((a) => /^[+-]?\d+(\.\d+)?$/.test(a))
+    .map(Number);
+
+  if (numericAccepted.length > 0) {
+    const m = val.match(/^([+-]?\d+(?:\.\d+)?)\s*([a-z%°\/²³·\-\s]*)$/i);
+    if (m) {
+      const userNum = Number(m[1]);
+      if (numericAccepted.some((n) => Math.abs(n - userNum) < 1e-6)) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 function initTimer() {
@@ -151,7 +185,8 @@ function initTimer() {
   const btnResetTimer = document.getElementById("btn-reset-timer");
   if (!display) return;
 
-  let seconds = 50 * 60;
+  const DEFAULT_SECONDS = 45 * 60;
+  let seconds = DEFAULT_SECONDS;
   let interval = null;
 
   const render = () => {
@@ -174,7 +209,7 @@ function initTimer() {
         } else {
           clearInterval(interval);
           interval = null;
-          alert("Tempo scaduto (50 minuti)! Clicca su 'Verifica risposte' per vedere il punteggio.");
+          alert("Tempo scaduto (45 minuti)! Clicca su 'Verifica risposte' per vedere il punteggio MUR.");
         }
       }, 1000);
     });
@@ -191,7 +226,7 @@ function initTimer() {
     btnResetTimer.addEventListener("click", () => {
       clearInterval(interval);
       interval = null;
-      seconds = 50 * 60;
+      seconds = DEFAULT_SECONDS;
       render();
     });
   }
