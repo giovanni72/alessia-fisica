@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 4 — Termodinamica</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-03-meccanica-fluidi.html">← G3</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-05-elettricita-magnetismo.html">Giorno 5 →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 4 di 7</span>
+          <span class="badge teal">UD 5 — Termodinamica (1,0 CFU)</span>
+          <span class="badge amber">≥ 30% esercizi numerici!</span>
+        </div>
+        <h1>Termodinamica: Calore, Gas Perfetti e Principi</h1>
+        <p class="subtitle">Come si scambia il calore, come si comportano i gas e quali limiti pone l'entropia ai sistemi fisici e biologici.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 4</span>
+        La <b>temperatura</b> misura l'agitazione termica media delle molecole; il <b>calore (Q)</b> è energia in transito da un corpo caldo a uno freddo. Il <b>1° Principio</b> dice che l'energia si conserva (<span class="math">ΔU = Q − W</span>); il <b>2° Principio</b> dice in quale direzione avvengono i processi spontanei (l'entropia totale cresce e nessuna macchina ha rendimento del 100%).
+      </div>
+
+      <h2>1. Temperatura, Calore e Passaggi di Stato</h2>
+      <ul>
+        <li><b>Scale termometriche:</b> <span class="math"><b>T(K) = t(°C) + 273,15</b></span>. Lo zero assoluto (0 K = −273,15 °C) è la temperatura minima possibile. Attenzione: una <i>variazione</i> di temperatura è identica in °C e in K (<span class="math">ΔT = Δt</span>)!</li>
+        <li><b>Principio Zero:</b> se A è in equilibrio termico con C e B è in equilibrio con C, allora A e B hanno la stessa temperatura.</li>
+        <li><b>Dilatazione termica lineare:</b> <span class="math">ΔL = L<sub>0</sub> · λ · ΔT</span>.</li>
+        <li><b>Trasmissione del calore:</b> <b>Conduzione</b> (contatto nei solidi, legge di Fourier), <b>Convezione</b> (movimento di fluidi caldi/freddi), <b>Irraggiamento</b> (onde EM infrarosse, avviene anche nel vuoto, legge di Stefan-Boltzmann <span class="math">P ∝ T⁴</span>).</li>
+      </ul>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Calore sensibile (cambia T)</div>
+          <div class="f-eq">Q = m · c · ΔT</div>
+          <div class="f-note"><i>c</i> = calore specifico. Acqua: 4186 J/(kg·K) = 1 cal/(g·°C). Capacità termica: C = m·c.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Passaggio di stato (T costante!)</div>
+          <div class="f-eq">Q = m · L</div>
+          <div class="f-note">Durante fusione o ebollizione la <b>temperatura NON cambia</b>: il calore serve a rompere i legami!</div>
+        </div>
+      </div>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — Termoregolazione e Sudorazione</span>
+        Il corpo umano mantiene ≈ 37 °C (310 K) disperdendo calore per irraggiamento, convezione ed evaporazione. La <b>sudorazione</b> sfrutta l'enorme <b>calore latente di evaporazione</b> dell'acqua (≈ 2,4 × 10⁶ J/kg): evaporare appena 100 g di sudore sottrae al corpo ~240 kJ (~57 kcal)!
+      </div>
+
+      <h2>2. Gas Perfetti (o Ideali)</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Equazione di Stato</div>
+          <div class="f-eq">P · V = n · R · T</div>
+          <div class="f-note">SI: P (Pa), V (m³), T (<b>Kelvin!</b>), R = 8,314 J/(mol·K).<br/>Oppure: P (atm), V (L), R = 0,0821 L·atm/(mol·K).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Legge combinata (n costante)</div>
+          <div class="f-eq"><span class="frac"><span>P<sub>1</sub>V<sub>1</sub></span><span>T<sub>1</sub></span></span> = <span class="frac"><span>P<sub>2</sub>V<sub>2</sub></span><span>T<sub>2</sub></span></span></div>
+          <div class="f-note"><b>Boyle</b> (T cost.): PV = cost.<br/><b>Charles/Gay-Lussac</b>: V/T = cost. (P cost.) | P/T = cost. (V cost.).</div>
+        </div>
+      </div>
+
+      <div class="box trap">
+        <span class="box-title">Trabocchetto classico: i gradi Celsius!</span>
+        Se un gas passa da 27 °C a 54 °C, la sua temperatura assoluta <b>NON raddoppia</b>! 27 °C = <b>300 K</b>; per raddoppiarla devi arrivare a 600 K = <b>327 °C</b>! Converti SEMPRE in Kelvin prima di fare qualsiasi rapporto.
+      </div>
+
+      <h2>3. Primo Principio e Trasformazioni Termodinamiche</h2>
+      <p><b>Primo Principio:</b> <span class="math"><b>ΔU = Q − W</b></span> (convenzione fisica standard: Q &gt; 0 calore <i>assorbito</i> dal gas; W &gt; 0 lavoro <i>compiuto</i> dal gas espandendosi). Per un gas ideale, l'energia interna <b>U dipende SOLO dalla temperatura T</b>!</p>
+
+      <table>
+        <thead>
+          <tr><th>Trasformazione</th><th>Grandezza costante</th><th>Cosa si annulla / Formula chiave</th><th>1° Principio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Isocora</b></td><td>Volume (ΔV = 0)</td><td><b>W = 0</b></td><td>ΔU = Q</td></tr>
+          <tr><td><b>Isobara</b></td><td>Pressione (P = cost.)</td><td><b>W = P · ΔV</b></td><td>ΔU = Q − PΔV</td></tr>
+          <tr><td><b>Isoterma</b></td><td>Temperatura (ΔT = 0)</td><td><b>ΔU = 0</b> (gas ideale)</td><td>Q = W</td></tr>
+          <tr><td><b>Adiabatica</b></td><td>Nessuno scambio di calore</td><td><b>Q = 0</b> (rapida o isolata)</td><td>ΔU = −W</td></tr>
+          <tr><td><b>Ciclica</b></td><td>Stato finale = iniziale</td><td><b>ΔU = 0</b></td><td>Q<sub>ciclo</sub> = W<sub>ciclo</sub> (area del ciclo)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Secondo Principio, Rendimento ed Entropia</h2>
+      <ul>
+        <li><b>Enunciato di Kelvin-Planck:</b> impossibile realizzare una macchina termica ciclica che trasformi <i>tutto</i> il calore assorbito in lavoro (rendimento sempre &lt; 100%).</li>
+        <li><b>Enunciato di Clausius:</b> il calore non passa mai spontaneamente da un corpo freddo a uno caldo.</li>
+        <li><b>Rendimento di una macchina termica:</b> <span class="math"><b>η = W / Q<sub>ass</sub> = 1 − Q<sub>ced</sub>/Q<sub>ass</sub></b></span>. Il rendimento massimo teorico (<b>macchina di Carnot</b>) è: <span class="math"><b>η<sub>Carnot</sub> = 1 − T<sub>C</sub> / T<sub>H</sub></b></span> (con T in Kelvin!).</li>
+        <li><b>Entropia (S):</b> misura il disordine/irreversibilità (<span class="math">ΔS = Q<sub>rev</sub> / T</span>, in J/K). In un sistema isolato <span class="math">ΔS ≥ 0</span>. Gli <b>organismi viventi</b> sono <b>sistemi aperti</b>: mantengono ordine interno (ΔS locale &lt; 0) solo aumentando l'entropia dell'ambiente (cedendo calore e scarti).</li>
+      </ul>
+
+      <h2>5. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Calorimetria): Quanta energia (in kJ) serve per scaldare 2 kg di acqua da 20 °C a 70 °C? (c = 4186 J/(kg·K))</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> ΔT = 70 − 20 = 50 K. Q = m·c·ΔT = 2 · 4186 · 50 = 418 600 J = <b>418,6 kJ</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (Gas Perfetti): Un gas ideale occupa 6 L alla pressione di 2 atm a temperatura costante. Se viene compresso fino a 2 L, qual è la nuova pressione?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Legge di Boyle (isoterma): P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub> ⇒ 2 · 6 = P<sub>2</sub> · 2 ⇒ <b>P<sub>2</sub> = 6 atm</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (1° Principio): Un gas assorbe 500 J di calore e si espande a pressione costante di 10⁵ Pa aumentando il volume di 2 × 10⁻³ m³ (2 L). Calcola ΔU.</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Lavoro isobaro: W = P·ΔV = 10⁵ · 2×10⁻³ = 200 J. Primo principio: ΔU = Q − W = 500 − 200 = <b>+300 J</b> (l'energia interna e quindi la temperatura aumentano).
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Rendimento di Carnot): Qual è il rendimento massimo di una macchina termica che opera tra 27 °C e 327 °C?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Converto subito in Kelvin! T<sub>C</sub> = 27 + 273 = 300 K; T<sub>H</sub> = 327 + 273 = 600 K. Rendimento: η = 1 − (300/600) = 1 − 0,5 = <b>0,50 (50%)</b>.
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>6. Mini-Test di Verifica — Giorno 4 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">1. Durante la fusione completa di un cubetto di ghiaccio a 0 °C (a pressione atmosferica), la temperatura del sistema ghiaccio+acqua:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Aumenta costantemente</li>
+            <li class="quiz-opt" data-val="b">B) Rimane costante a 0 °C finché tutto il ghiaccio non si è sciolto</li>
+            <li class="quiz-opt" data-val="c">C) Diminuisce leggermente</li>
+            <li class="quiz-opt" data-val="d">D) Dipende dalla massa del ghiaccio</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Durante ogni passaggio di stato di una sostanza pura, la temperatura resta costante; il calore assorbito è calore latente (Q = mL).</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">2. Quale meccanismo di trasmissione del calore può avvenire anche nel vuoto?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Conduzione</li>
+            <li class="quiz-opt" data-val="b">B) Convezione</li>
+            <li class="quiz-opt" data-val="c">C) Irraggiamento</li>
+            <li class="quiz-opt" data-val="d">D) Tutti e tre</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> L'<b>irraggiamento</b> avviene tramite onde elettromagnetiche (es. il calore del Sole) e non richiede alcun mezzo materiale.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">3. In una trasformazione ISOCORA (a volume costante) di un gas perfetto, il lavoro compiuto dal gas è:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Nullo (W = 0)</li>
+            <li class="quiz-opt" data-val="b">B) Uguale al calore assorbito</li>
+            <li class="quiz-opt" data-val="c">C) Uguale a P·V</li>
+            <li class="quiz-opt" data-val="d">D) Sempre negativo</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Se il volume non varia (ΔV = 0), il gas non sposta alcun pistone ⇒ <b>W = 0</b> e ΔU = Q.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">4. In una trasformazione ISOTERMA di un gas ideale, se il gas compie 300 J di lavoro espandendosi, quanto calore ha assorbito?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 0 J</li>
+            <li class="quiz-opt" data-val="b">B) −300 J</li>
+            <li class="quiz-opt" data-val="c">C) 150 J</li>
+            <li class="quiz-opt" data-val="d">D) +300 J</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Isoterma ⇒ ΔT = 0 ⇒ ΔU = 0. Dal 1° principio (0 = Q − W) segue <b>Q = W = +300 J</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">5. Un gas perfetto è riscaldato a volume costante da 27 °C a 327 °C. Come cambia la sua pressione?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Aumenta di circa 12 volte</li>
+            <li class="quiz-opt" data-val="b">B) Raddoppia</li>
+            <li class="quiz-opt" data-val="c">C) Si dimezza</li>
+            <li class="quiz-opt" data-val="d">D) Rimane invariata</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> In Kelvin: T<sub>1</sub> = 300 K, T<sub>2</sub> = 600 K. Poiché P/T = cost., se T raddoppia anche la pressione <b>raddoppia</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="310|310.15">
+          <div class="quiz-q">6. (Completamento) La temperatura corporea normale è 37 °C. A quanti Kelvin corrisponde (approssimando 273)?</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 300" /> <span>K</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> 37 + 273 = <b>310 K</b> (esattamente 310,15 K).</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 4</h2>
+        <ol>
+          <li><b>B</b> (Resta costante a 0 °C durante il passaggio di stato).</li>
+          <li><b>C</b> (Irraggiamento).</li>
+          <li><b>A</b> (Isocora ⇒ ΔV = 0 ⇒ W = 0).</li>
+          <li><b>D</b> (Isoterma ⇒ ΔU = 0 ⇒ Q = W = +300 J).</li>
+          <li><b>B</b> (300 K → 600 K ⇒ la pressione raddoppia).</li>
+          <li><b>310 K</b> (37 + 273 = 310 K).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-03-meccanica-fluidi.html">← Giorno 3</a>
+        <a class="btn" href="giorno-05-elettricita-magnetismo.html">Vai al Giorno 5: Elettricità e Magnetismo →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

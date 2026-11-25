@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 1 — Metodi della Fisica e Cinematica</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-02-dinamica-energia-statica.html">Giorno 2 →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 1 di 7</span>
+          <span class="badge teal">UD 1 (0,2 CFU) + UD 2A (0,7 CFU)</span>
+          <span class="badge amber">Tempo consigliato: 2,5 – 3 ore</span>
+        </div>
+        <h1>Metodi della Fisica, Vettori e Cinematica</h1>
+        <p class="subtitle">Le fondamenta indispensabili per non sbagliare mai un conto: unità SI, conversioni, vettori e leggi del moto.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 1</span>
+        Prima di risolvere qualsiasi problema di Fisica devi fare due cose: <b>portare tutto nel Sistema Internazionale (SI)</b> e capire se la grandezza è uno <b>scalare</b> (solo un numero, es. massa, temperatura, energia) o un <b>vettore</b> (numero + direzione + verso, es. velocità, forza, accelerazione). La cinematica descrive <i>come</i> un corpo si muove senza chiedersi ancora <i>perché</i>.
+      </div>
+
+      <h2>1. Sistema Internazionale (SI), Prefissi e Conversioni</h2>
+      <p>Le <b>7 grandezze fondamentali</b> del SI sono: lunghezza (<b>m</b>), massa (<b>kg</b>), tempo (<b>s</b>), corrente elettrica (<b>A</b>), temperatura (<b>K</b>), quantità di sostanza (<b>mol</b>), intensità luminosa (<b>cd</b>). Tutte le altre sono <b>derivate</b> (es. Newton = kg·m/s², Joule = N·m, Watt = J/s, Pascal = N/m²).</p>
+
+      <table>
+        <thead>
+          <tr><th>Prefisso</th><th>Simbolo</th><th>Potenza di 10</th><th>Esempio medico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Giga / Mega / chilo</td><td>G / M / k</td><td>10⁹ / 10⁶ / 10³</td><td>1 MHz (ultrasuoni ecografia) = 10⁶ Hz</td></tr>
+          <tr><td>deci / centi / milli</td><td>d / c / m</td><td>10⁻¹ / 10⁻² / 10⁻³</td><td>1 mV (potenziale ECG) = 10⁻³ V</td></tr>
+          <tr><td>micro / nano / pico</td><td>μ / n / p</td><td>10⁻⁶ / 10⁻⁹ / 10⁻¹²</td><td>Globulo rosso ≈ 7 μm = 7×10⁻⁶ m</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box trap">
+        <span class="box-title">Attenzione ai trabocchetti di conversione (escono SEMPRE!)</span>
+        <ul>
+          <li><b>Velocità:</b> da km/h a m/s si <b>divide per 3,6</b> (es. 72 km/h = 20 m/s). Da m/s a km/h si moltiplica per 3,6.</li>
+          <li><b>Aree e Volumi:</b> l'esponente si moltiplica! 1 cm = 10⁻² m ⇒ <b>1 cm² = 10⁻⁴ m²</b> e <b>1 cm³ = 10⁻⁶ m³</b>.</li>
+          <li><b>Litri:</b> <b>1 L = 1 dm³ = 10⁻³ m³</b>, mentre <b>1 mL = 1 cm³ = 10⁻⁶ m³</b>.</li>
+          <li><b>Densità:</b> <b>1 g/cm³ = 1000 kg/m³</b> (densità dell'acqua).</li>
+        </ul>
+      </div>
+
+      <h2>2. Vettori e Trigonometria di base</h2>
+      <p>Un vettore <span class="math"><b>v</b></span> che forma un angolo <span class="math">θ</span> con l'asse orizzontale si scompone in due componenti perpendicolari:</p>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Componenti di un vettore</div>
+          <div class="f-eq">v<sub>x</sub> = v·cosθ &nbsp;|&nbsp; v<sub>y</sub> = v·sinθ</div>
+          <div class="f-note">Valori da sapere: sin30° = 0,5; cos60° = 0,5; sin45° = cos45° ≈ 0,71; sin90° = 1.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Modulo &amp; Prodotti</div>
+          <div class="f-eq">v = √(v<sub>x</sub>² + v<sub>y</sub>²)</div>
+          <div class="f-note"><b>Scalare</b> (dà un numero): A·B·cosθ.<br/><b>Vettoriale</b> (dà un vettore): modulo A·B·sinθ.</div>
+        </div>
+      </div>
+
+      <h2>3. Cinematica: i 4 moti da sapere</h2>
+      <ul>
+        <li><b>Velocità media:</b> <span class="math">v<sub>m</sub> = Δs / Δt</span> (m/s). <b>Accelerazione media:</b> <span class="math">a<sub>m</sub> = Δv / Δt</span> (m/s²).</li>
+        <li><b>Moto Rettilineo Uniforme (MRU):</b> velocità costante (<span class="math">a = 0</span>). Grafico spazio-tempo = retta inclinata.</li>
+        <li><b>Moto Rettilineo Uniformemente Accelerato (MRUA):</b> accelerazione costante (es. <b>caduta libera</b> con <span class="math">a = g ≈ 9,81 m/s²</span>). Grafico spazio-tempo = parabola; velocità-tempo = retta.</li>
+        <li><b>Moto Circolare Uniforme (MCU):</b> modulo della velocità costante, ma la direzione cambia ⇒ esiste sempre un'<b>accelerazione centripeta</b> diretta verso il centro!</li>
+        <li><b>Moto Armonico:</b> oscillazione periodica attorno a una posizione di equilibrio (es. molla, pendolo) caratterizzata da periodo <span class="math">T</span> (s), frequenza <span class="math">f = 1/T</span> (Hz) e pulsazione <span class="math">ω = 2πf</span> (rad/s).</li>
+      </ul>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">MRU (a = 0)</div>
+          <div class="f-eq">s = s<sub>0</sub> + v·t</div>
+          <div class="f-note">Spazio percorso = area sotto il grafico v(t).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">MRUA (a = cost.)</div>
+          <div class="f-eq">v = v<sub>0</sub> + a·t<br/>s = s<sub>0</sub> + v<sub>0</sub>t + ½at²</div>
+          <div class="f-note">Formula "salva-tempo": <b>v² = v<sub>0</sub>² + 2aΔs</b>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Caduta libera (da fermo)</div>
+          <div class="f-eq">h = ½gt² &nbsp;|&nbsp; v = √(2gh)</div>
+          <div class="f-note">Indipendente dalla massa del corpo (in assenza d'aria)!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Moto Circolare Uniforme</div>
+          <div class="f-eq">v = <span class="frac"><span>2πR</span><span>T</span></span> = ωR &nbsp;|&nbsp; a<sub>c</sub> = <span class="frac"><span>v²</span><span>R</span></span> = ω²R</div>
+          <div class="f-note">ω = 2πf (rad/s). Ricorda: rpm ÷ 60 = giri/secondo (Hz).</div>
+        </div>
+      </div>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — La centrifuga da laboratorio</span>
+        In laboratorio clinico si separa il plasma dai globuli rossi usando una <b>centrifuga</b>. Le provette ruotano a migliaia di giri al minuto (rpm), generando un'accelerazione centripeta <span class="math">a<sub>c</sub> = ω²R</span> enorme (spesso espressa in multipli di <i>g</i>, es. "3000 g"). Raddoppiare la frequenza di rotazione <b>quadruplica</b> l'accelerazione centripeta!
+      </div>
+
+      <h2>4. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Conversioni): Un'arteria ha sezione S = 2 cm² e il sangue vi scorre a 36 cm/s. Esprimi S in m² e v in m/s.</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Poiché 1 cm = 10⁻² m, abbiamo 1 cm² = (10⁻²)² m² = 10⁻⁴ m². Quindi <b>S = 2 × 10⁻⁴ m²</b>. Per la velocità: 36 cm/s = 36 × 10⁻² m/s = <b>0,36 m/s</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (MRUA / Frenata): Un'ambulanza viaggia a 72 km/h e frena con decelerazione costante a = −4 m/s² fino a fermarsi. Quanto spazio percorre?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Converto subito la velocità: v<sub>0</sub> = 72 / 3,6 = 20 m/s; velocità finale v = 0. Uso la formula senza tempo: <span class="math">v² = v<sub>0</sub>² + 2aΔs</span> ⇒ 0 = 20² + 2(−4)Δs ⇒ 8Δs = 400 ⇒ <b>Δs = 50 m</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (Caduta libera): Una fiala cade da un tavolo alto h = 1,25 m. Con che velocità tocca terra? (usa g = 10 m/s²)</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Parte da fermo (v<sub>0</sub> = 0), quindi <span class="math">v = √(2gh) = √(2 · 10 · 1,25) = √25 = <b>5 m/s</b></span>. Tempo di caduta: t = v/g = 5/10 = 0,5 s.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Centrifuga): Un rotore di raggio R = 10 cm compie 3000 giri al minuto (rpm). Calcola la frequenza f e l'accelerazione centripeta a<sub>c</sub>.</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> R = 0,10 m. Frequenza: f = 3000 / 60 = <b>50 Hz</b>. Pulsazione: ω = 2πf = 100π ≈ 314 rad/s. Accelerazione: <span class="math">a<sub>c</sub> = ω²R ≈ (314)² · 0,10 ≈ <b>9860 m/s²</b></span> (circa 1000 volte <i>g</i>!).
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>5. Mini-Test di Verifica — Giorno 1 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">1. A quanti metri cubi (m³) corrispondono 500 mL di soluzione fisiologica?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 0,5 m³</li>
+            <li class="quiz-opt" data-val="b">B) 5 × 10⁻⁴ m³</li>
+            <li class="quiz-opt" data-val="c">C) 5 × 10⁻² m³</li>
+            <li class="quiz-opt" data-val="d">D) 5 × 10⁻⁶ m³</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> 500 mL = 0,5 L. Poiché 1 L = 10⁻³ m³, 0,5 L = 0,5 × 10⁻³ m³ = <b>5 × 10⁻⁴ m³</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">2. Quale tra le seguenti grandezze fisiche è una grandezza SCALARE?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Accelerazione</li>
+            <li class="quiz-opt" data-val="b">B) Quantità di moto</li>
+            <li class="quiz-opt" data-val="c">C) Energia cinetica</li>
+            <li class="quiz-opt" data-val="d">D) Forza peso</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> L'energia (come lavoro, massa, pressione, temperatura) è uno <b>scalare</b>; forza, accelerazione e quantità di moto sono vettori.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">3. Due vettori perpendicolari hanno moduli A = 6 e B = 8. Quanto vale il modulo della loro somma?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 10</li>
+            <li class="quiz-opt" data-val="b">B) 14</li>
+            <li class="quiz-opt" data-val="c">C) 2</li>
+            <li class="quiz-opt" data-val="d">D) 48</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per il teorema di Pitagora: √(6² + 8²) = √(36 + 64) = √100 = <b>10</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">4. Un corpo parte da fermo e si muove con accelerazione costante a = 2 m/s² per 5 secondi. Quanti metri percorre?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 10 m</li>
+            <li class="quiz-opt" data-val="b">B) 50 m</li>
+            <li class="quiz-opt" data-val="c">C) 20 m</li>
+            <li class="quiz-opt" data-val="d">D) 25 m</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> s = ½at² = ½ · 2 · 5² = <b>25 m</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">5. In un moto circolare uniforme, se raddoppia la velocità v mantenendo costante il raggio R, l'accelerazione centripeta:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Raddoppia</li>
+            <li class="quiz-opt" data-val="b">B) Quadruplica</li>
+            <li class="quiz-opt" data-val="c">C) Rimane invariata</li>
+            <li class="quiz-opt" data-val="d">D) Si dimezza</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Poiché a<sub>c</sub> = v²/R, raddoppiando v si ottiene (2v)²/R = 4·(v²/R): <b>quadruplica</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="30">
+          <div class="quiz-q">6. (Completamento) Un'auto viaggia a 108 km/h. A quanti m/s corrisponde? (scrivi solo il numero)</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 25" /> <span>m/s</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> 108 ÷ 3,6 = <b>30 m/s</b>.</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 1</h2>
+        <ol>
+          <li><b>B</b> (500 mL = 0,5 L = 5 × 10⁻⁴ m³).</li>
+          <li><b>C</b> (L'energia cinetica è uno scalare).</li>
+          <li><b>A</b> (√(6² + 8²) = 10).</li>
+          <li><b>D</b> (s = ½·2·5² = 25 m).</li>
+          <li><b>B</b> (a<sub>c</sub> = v²/R, quindi quadruplica).</li>
+          <li><b>30 m/s</b> (108 ÷ 3,6 = 30).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="../index.html">← Dashboard</a>
+        <a class="btn" href="giorno-02-dinamica-energia-statica.html">Vai al Giorno 2: Dinamica ed Energia →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

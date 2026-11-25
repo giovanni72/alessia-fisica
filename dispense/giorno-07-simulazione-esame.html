@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 7 — Simulazione Completa 31 Quesiti (Stile MUR)</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-sim="true">
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-06-onde-radiazioni.html">← G6</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 7 di 7</span>
+          <span class="badge teal">Simulazione Ufficiale Stile MUR</span>
+          <span class="badge med">31 Quesiti · 50 Minuti</span>
+        </div>
+        <h1>Simulazione d'Esame — Fisica (Semestre Filtro)</h1>
+        <p class="subtitle">31 quesiti (26 a risposta multipla + 5 a completamento) bilanciati sui CFU reali delle 7 Unità Didattiche. Punteggio: +1 corretta, −0,25 errata, 0 omessa.</p>
+      </div>
+
+      <div class="sim-bar">
+        <div>
+          <strong>Cronometro d'esame:</strong>
+          <span id="sim-timer" class="timer-display">50:00</span>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button id="btn-start-timer" class="btn teal">Avvia 50 min</button>
+          <button id="btn-pause-timer" class="btn outline">Pausa</button>
+          <button id="btn-reset-timer" class="btn outline">Reset</button>
+        </div>
+      </div>
+
+      <section class="quiz-section" style="margin-top:0;">
+
+        <!-- UD 1 (1 quesito) -->
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">1. [UD1] A quanti metri cubi (m³) corrispondono 2,5 litri di plasma?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 2,5 × 10⁻² m³</li>
+            <li class="quiz-opt" data-val="b">B) 2,5 × 10⁻³ m³</li>
+            <li class="quiz-opt" data-val="c">C) 2,5 × 10⁻⁶ m³</li>
+            <li class="quiz-opt" data-val="d">D) 250 m³</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> 1 L = 1 dm³ = 10⁻³ m³, quindi 2,5 L = <b>2,5 × 10⁻³ m³</b>.</div>
+        </div>
+
+        <!-- UD 2 (7 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">2. [UD2] Un'auto viaggia a velocità costante di 90 km/h per 20 secondi. Quanti metri percorre?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 1800 m</li>
+            <li class="quiz-opt" data-val="b">B) 450 m</li>
+            <li class="quiz-opt" data-val="c">C) 500 m</li>
+            <li class="quiz-opt" data-val="d">D) 250 m</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> 90 km/h ÷ 3,6 = 25 m/s. Spazio: s = v·t = 25 · 20 = <b>500 m</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">3. [UD2] Un oggetto cade da fermo da un'altezza di 45 m (trascurando l'aria, g = 10 m/s²). Quanto tempo impiega a toccare terra?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 3 s</li>
+            <li class="quiz-opt" data-val="b">B) 4,5 s</li>
+            <li class="quiz-opt" data-val="c">C) 9 s</li>
+            <li class="quiz-opt" data-val="d">D) 2,25 s</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> h = ½gt² ⇒ 45 = 5t² ⇒ t² = 9 ⇒ <b>t = 3 s</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">4. [UD2] Un punto materiale descrive una circonferenza di raggio R = 0,5 m a velocità costante v = 4 m/s. Quanto vale l'accelerazione centripeta?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 8 m/s²</li>
+            <li class="quiz-opt" data-val="b">B) 16 m/s²</li>
+            <li class="quiz-opt" data-val="c">C) 2 m/s²</li>
+            <li class="quiz-opt" data-val="d">D) 32 m/s²</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> a<sub>c</sub> = v²/R = 4² / 0,5 = 16 / 0,5 = <b>32 m/s²</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">5. [UD2] Una forza risultante costante di 24 N agisce su una massa di 6 kg. Qual è l'accelerazione prodotta?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 144 m/s²</li>
+            <li class="quiz-opt" data-val="b">B) 4 m/s²</li>
+            <li class="quiz-opt" data-val="c">C) 0,25 m/s²</li>
+            <li class="quiz-opt" data-val="d">D) 18 m/s²</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> 2° principio: a = F/m = 24 / 6 = <b>4 m/s²</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">6. [UD2] Un pacco di 5 kg viene sollevato di 4 m (g = 10 m/s²). Di quanto aumenta la sua energia potenziale gravitazionale?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 200 J</li>
+            <li class="quiz-opt" data-val="b">B) 20 J</li>
+            <li class="quiz-opt" data-val="c">C) 50 J</li>
+            <li class="quiz-opt" data-val="d">D) 400 J</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> ΔU = mgh = 5 · 10 · 4 = <b>200 J</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">7. [UD2] Un motore compie un lavoro di 1200 J in 4 secondi. Qual è la sua potenza media?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 4800 W</li>
+            <li class="quiz-opt" data-val="b">B) 1200 W</li>
+            <li class="quiz-opt" data-val="c">C) 300 W</li>
+            <li class="quiz-opt" data-val="d">D) 600 W</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> P = W/t = 1200 / 4 = <b>300 W</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="20">
+          <div class="quiz-q">8. [UD2 — Completamento] In una leva di 1° genere in equilibrio, una resistenza di 60 N ha braccio 0,2 m. Quale forza motrice (in N) applicata a 0,6 m dal fulcro la bilancia?</div>
+          <div class="quiz-fill"><input type="text" placeholder="Numero" /> <span>N</span></div>
+          <div class="quiz-exp"><b>Soluzione:</b> F<sub>m</sub> · 0,6 = 60 · 0,2 = 12 ⇒ F<sub>m</sub> = 12 / 0,6 = <b>20 N</b>.</div>
+        </div>
+
+        <!-- UD 3 (6 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">9. [UD3] Una forza perpendicolare di 500 N agisce su una superficie di 0,05 m². Quanto vale la pressione esercitata?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 25 Pa</li>
+            <li class="quiz-opt" data-val="b">B) 10 000 Pa (10 kPa)</li>
+            <li class="quiz-opt" data-val="c">C) 1000 Pa</li>
+            <li class="quiz-opt" data-val="d">D) 2500 Pa</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> p = F/S = 500 / 0,05 = <b>10 000 Pa (10 kPa)</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">10. [UD3] Quanto vale la sola pressione idrostatica (ρgh) a 5 m di profondità in acqua dolce (ρ = 1000 kg/m³, g = 10 m/s²)?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 5000 Pa</li>
+            <li class="quiz-opt" data-val="b">B) 500 kPa</li>
+            <li class="quiz-opt" data-val="c">C) 50 kPa</li>
+            <li class="quiz-opt" data-val="d">D) 5 kPa</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Δp = ρgh = 1000 · 10 · 5 = 50 000 Pa = <b>50 kPa</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">11. [UD3] Un oggetto di volume V = 0,002 m³ (2 L) è completamente immerso in acqua (ρ = 1000 kg/m³, g = 10 m/s²). Quanto vale la spinta di Archimede?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 20 N</li>
+            <li class="quiz-opt" data-val="b">B) 2 N</li>
+            <li class="quiz-opt" data-val="c">C) 200 N</li>
+            <li class="quiz-opt" data-val="d">D) Dipende dalla densità dell'oggetto</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> F<sub>A</sub> = ρ<sub>acqua</sub>·V·g = 1000 · 0,002 · 10 = <b>20 N</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">12. [UD3] In un condotto di sezione 4 cm² un liquido scorre a 10 cm/s. Se la sezione si restringe a 1 cm², la velocità diventa:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 2,5 cm/s</li>
+            <li class="quiz-opt" data-val="b">B) 20 cm/s</li>
+            <li class="quiz-opt" data-val="c">C) 10 cm/s</li>
+            <li class="quiz-opt" data-val="d">D) 40 cm/s</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Continuità: S<sub>1</sub>v<sub>1</sub> = S<sub>2</sub>v<sub>2</sub> ⇒ 4 · 10 = 1 · v<sub>2</sub> ⇒ <b>v<sub>2</sub> = 40 cm/s</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">13. [UD3] Secondo la legge di Poiseuille, se raddoppia la lunghezza L di un vaso (a parità di Δp, raggio e viscosità), la portata Q:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Raddoppia</li>
+            <li class="quiz-opt" data-val="b">B) Si dimezza</li>
+            <li class="quiz-opt" data-val="c">C) Si riduce di 16 volte</li>
+            <li class="quiz-opt" data-val="d">D) Resta invariata</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Q = πr⁴Δp/(8ηL): Q è inversamente proporzionale a L ⇒ se L raddoppia, Q <b>si dimezza</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="60">
+          <div class="quiz-q">14. [UD3 — Completamento] Per una cavità sferica (legge di Laplace, Δp = 2γ/R) con tensione superficiale γ = 0,03 N/m e raggio R = 0,001 m (1 mm), quanto vale Δp in Pascal?</div>
+          <div class="quiz-fill"><input type="text" placeholder="Numero" /> <span>Pa</span></div>
+          <div class="quiz-exp"><b>Soluzione:</b> Δp = 2 · 0,03 / 0,001 = 0,06 / 0,001 = <b>60 Pa</b>.</div>
+        </div>
+
+        <!-- UD 4 (2 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">15. [UD4] Un'onda sonora si propaga in aria a 340 m/s con frequenza 170 Hz. Quanto vale la sua lunghezza d'onda λ?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 2 m</li>
+            <li class="quiz-opt" data-val="b">B) 0,5 m</li>
+            <li class="quiz-opt" data-val="c">C) 510 m</li>
+            <li class="quiz-opt" data-val="d">D) 170 m</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> λ = v/f = 340 / 170 = <b>2 m</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">16. [UD4] Il livello sonoro in una stanza sale da 50 dB a 80 dB. Di quante volte è aumentata l'intensità sonora?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 30 volte</li>
+            <li class="quiz-opt" data-val="b">B) 3 volte</li>
+            <li class="quiz-opt" data-val="c">C) 100 volte</li>
+            <li class="quiz-opt" data-val="d">D) 1000 volte</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Δβ = +30 dB ⇒ 10³ = <b>1000 volte</b>.</div>
+        </div>
+
+        <!-- UD 5 (5 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">17. [UD5] A quanti Kelvin corrisponde la temperatura di 127 °C (approssimando 0 °C = 273 K)?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 146 K</li>
+            <li class="quiz-opt" data-val="b">B) 327 K</li>
+            <li class="quiz-opt" data-val="c">C) 400 K</li>
+            <li class="quiz-opt" data-val="d">D) 300 K</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> 127 + 273 = <b>400 K</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">18. [UD5] Quanto calore serve per riscaldare 1 kg di acqua (c ≈ 4200 J/(kg·K)) di 10 °C?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 420 J</li>
+            <li class="quiz-opt" data-val="b">B) 42 kJ</li>
+            <li class="quiz-opt" data-val="c">C) 4,2 kJ</li>
+            <li class="quiz-opt" data-val="d">D) 420 kJ</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Q = m·c·ΔT = 1 · 4200 · 10 = 42 000 J = <b>42 kJ</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">19. [UD5] Un gas si espande a pressione costante P = 2 × 10⁵ Pa aumentando il suo volume di ΔV = 3 × 10⁻³ m³. Quale lavoro compie?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 600 J</li>
+            <li class="quiz-opt" data-val="b">B) 60 J</li>
+            <li class="quiz-opt" data-val="c">C) 6000 J</li>
+            <li class="quiz-opt" data-val="d">D) 0 J</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> W = P·ΔV = (2×10⁵) · (3×10⁻³) = 6 × 10² = <b>600 J</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">20. [UD5] Un gas cede 100 J di calore all'ambiente mentre subisce una compressione con lavoro di 250 J (fatto sul gas). Quanto vale ΔU?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) −350 J</li>
+            <li class="quiz-opt" data-val="b">B) +350 J</li>
+            <li class="quiz-opt" data-val="c">C) −150 J</li>
+            <li class="quiz-opt" data-val="d">D) +150 J</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Calore ceduto: Q = −100 J. Lavoro subito: W = −250 J. Quindi ΔU = Q − W = −100 − (−250) = <b>+150 J</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="40|40%">
+          <div class="quiz-q">21. [UD5 — Completamento] Qual è il rendimento massimo percentuale (Carnot) di una macchina termica tra T<sub>C</sub> = 300 K e T<sub>H</sub> = 500 K?</div>
+          <div class="quiz-fill"><input type="text" placeholder="Es. 50" /> <span>%</span></div>
+          <div class="quiz-exp"><b>Soluzione:</b> η = 1 − 300/500 = 1 − 0,6 = 0,4 = <b>40%</b>.</div>
+        </div>
+
+        <!-- UD 6 (6 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">22. [UD6] Se la distanza tra due cariche puntiformi si dimezza, la forza elettrostatica di Coulomb tra esse:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Raddoppia</li>
+            <li class="quiz-opt" data-val="b">B) Si riduce a 1/4</li>
+            <li class="quiz-opt" data-val="c">C) Quadruplica</li>
+            <li class="quiz-opt" data-val="d">D) Si dimezza</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> F ∝ 1/r². Dimezzando r, 1/(1/2)² = 4 ⇒ la forza <b>quadruplica</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">23. [UD6] Tra due armature parallele distanti d = 0,04 m c'è una differenza di potenziale ΔV = 200 V. Quanto vale il campo elettrico uniforme E?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 8 V/m</li>
+            <li class="quiz-opt" data-val="b">B) 5000 V/m</li>
+            <li class="quiz-opt" data-val="c">C) 500 V/m</li>
+            <li class="quiz-opt" data-val="d">D) 8000 V/m</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> E = ΔV / d = 200 / 0,04 = <b>5000 V/m</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">24. [UD6] Due condensatori da 3 μF e 6 μF sono collegati in SERIE. Qual è la capacità equivalente?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 2 μF</li>
+            <li class="quiz-opt" data-val="b">B) 9 μF</li>
+            <li class="quiz-opt" data-val="c">C) 4,5 μF</li>
+            <li class="quiz-opt" data-val="d">D) 18 μF</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Condensatori in serie: C<sub>eq</sub> = (3 · 6)/(3 + 6) = 18/9 = <b>2 μF</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">25. [UD6] Due resistenze da 4 Ω e 6 Ω sono in SERIE con una batteria da 20 V. Quanta corrente circola nel circuito?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 5 A</li>
+            <li class="quiz-opt" data-val="b">B) 0,5 A</li>
+            <li class="quiz-opt" data-val="c">C) 10 A</li>
+            <li class="quiz-opt" data-val="d">D) 2 A</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> R<sub>eq</sub> = 4 + 6 = 10 Ω. I = ΔV / R<sub>eq</sub> = 20 / 10 = <b>2 A</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">26. [UD6] Una resistenza da 4 Ω è collegata a una differenza di potenziale di 12 V. Quale potenza elettrica dissipa?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 48 W</li>
+            <li class="quiz-opt" data-val="b">B) 3 W</li>
+            <li class="quiz-opt" data-val="c">C) 36 W</li>
+            <li class="quiz-opt" data-val="d">D) 144 W</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> P = (ΔV)² / R = 12² / 4 = 144 / 4 = <b>36 W</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="30">
+          <div class="quiz-q">27. [UD6 — Completamento] Una carica q = 2 C si muove a v = 5 m/s perpendicolarmente a un campo magnetico B = 3 T. Quanto vale il modulo della forza di Lorentz (in N)?</div>
+          <div class="quiz-fill"><input type="text" placeholder="Numero" /> <span>N</span></div>
+          <div class="quiz-exp"><b>Soluzione:</b> F = q·v·B·sin(90°) = 2 · 5 · 3 · 1 = <b>30 N</b>.</div>
+        </div>
+
+        <!-- UD 7 (4 quesiti) -->
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">28. [UD7] Quale tra le seguenti radiazioni elettromagnetiche ha la LUNGHEZZA D'ONDA MAGGIORE?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Onde radio</li>
+            <li class="quiz-opt" data-val="b">B) Raggi ultravioletti</li>
+            <li class="quiz-opt" data-val="c">C) Raggi X</li>
+            <li class="quiz-opt" data-val="d">D) Raggi gamma</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Le <b>onde radio</b> hanno la frequenza più bassa e quindi la lunghezza d'onda λ più grande.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">29. [UD7] Nel decadimento beta più (β⁺, emissione di un positrone, usato nella PET), come variano Z e A?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Z aumenta di 1, A resta invariato</li>
+            <li class="quiz-opt" data-val="b">B) Z diminuisce di 1, A resta invariato</li>
+            <li class="quiz-opt" data-val="c">C) Z diminuisce di 2, A diminuisce di 4</li>
+            <li class="quiz-opt" data-val="d">D) Z e A restano invariati</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> Un protone diventa neutrone + positrone ⇒ <b>Z − 1, A invariato</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">30. [UD7] Un isotopo radioattivo ha tempo di dimezzamento T<sub>½</sub> = 10 minuti. Dopo 30 minuti, quale percentuale di nuclei iniziali rimane?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 50%</li>
+            <li class="quiz-opt" data-val="b">B) 25%</li>
+            <li class="quiz-opt" data-val="c">C) 33,3%</li>
+            <li class="quiz-opt" data-val="d">D) 12,5%</li>
+          </ul>
+          <div class="quiz-exp"><b>Soluzione:</b> 30 / 10 = 3 dimezzamenti: (½)³ = 1/8 = <b>12,5%</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="234">
+          <div class="quiz-q">31. [UD7 — Completamento] Il nucleo di Uranio-238 (<sup>238</sup><sub>92</sub>U) subisce un decadimento alfa (α). Qual è il numero di massa A del nucleo figlio?</div>
+          <div class="quiz-fill"><input type="text" placeholder="Es. 230" /></div>
+          <div class="quiz-exp"><b>Soluzione:</b> Il decadimento α riduce A di 4 unità: 238 − 4 = <b>234</b> (<sup>234</sup><sub>90</sub>Th).</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte e calcola punteggio MUR</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi tutte le soluzioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia simulazione</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Chiave di Correzione — Simulazione 31 Quesiti</h2>
+        <ol>
+          <li><b>B</b> (2,5 × 10⁻³ m³)</li>
+          <li><b>C</b> (25 m/s · 20 s = 500 m)</li>
+          <li><b>A</b> (t = √(2·45/10) = 3 s)</li>
+          <li><b>D</b> (16/0,5 = 32 m/s²)</li>
+          <li><b>B</b> (24/6 = 4 m/s²)</li>
+          <li><b>A</b> (5·10·4 = 200 J)</li>
+          <li><b>C</b> (1200/4 = 300 W)</li>
+          <li><b>20 N</b> (60·0,2 / 0,6 = 20 N)</li>
+          <li><b>B</b> (500/0,05 = 10 kPa)</li>
+          <li><b>C</b> (1000·10·5 = 50 kPa)</li>
+          <li><b>A</b> (1000·0,002·10 = 20 N)</li>
+          <li><b>D</b> (4·10/1 = 40 cm/s)</li>
+          <li><b>B</b> (Si dimezza: Q ∝ 1/L)</li>
+          <li><b>60 Pa</b> (2·0,03/0,001 = 60 Pa)</li>
+          <li><b>A</b> (340/170 = 2 m)</li>
+          <li><b>D</b> (+30 dB ⇒ × 1000)</li>
+          <li><b>C</b> (127 + 273 = 400 K)</li>
+          <li><b>B</b> (1·4200·10 = 42 kJ)</li>
+          <li><b>A</b> (2×10⁵ · 3×10⁻³ = 600 J)</li>
+          <li><b>D</b> (−100 − (−250) = +150 J)</li>
+          <li><b>40%</b> (1 − 300/500 = 0,4)</li>
+          <li><b>C</b> (Quadruplica: F ∝ 1/r²)</li>
+          <li><b>B</b> (200/0,04 = 5000 V/m)</li>
+          <li><b>A</b> (3·6/(3+6) = 2 μF)</li>
+          <li><b>D</b> (20/(4+6) = 2 A)</li>
+          <li><b>C</b> (12²/4 = 36 W)</li>
+          <li><b>30 N</b> (2·5·3 = 30 N)</li>
+          <li><b>A</b> (Onde radio)</li>
+          <li><b>B</b> (Z − 1, A invariato)</li>
+          <li><b>D</b> (1/8 = 12,5%)</li>
+          <li><b>234</b> (238 − 4 = 234)</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-06-onde-radiazioni.html">← Giorno 6</a>
+        <a class="btn" href="../index.html">Torna alla Dashboard →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

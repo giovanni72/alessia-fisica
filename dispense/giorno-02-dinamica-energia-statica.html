@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 2 — Dinamica, Energia, Quantità di Moto e Leve</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-01-metodi-cinematica.html">← G1</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-03-meccanica-fluidi.html">Giorno 3 →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 2 di 7</span>
+          <span class="badge teal">UD 2B — Meccanica (0,7 CFU)</span>
+          <span class="badge amber">Tempo consigliato: 3 ore</span>
+        </div>
+        <h1>Dinamica, Lavoro, Energia e Leve nel Corpo Umano</h1>
+        <p class="subtitle">Come le forze causano il moto, come si conserva l'energia e come funzionano le leve muscolo-scheletriche.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 2</span>
+        Una <b>forza</b> non serve a mantenere la velocità, ma a <b>cambiarla</b> (<span class="math">F = ma</span>). Quando una forza sposta un corpo, compie <b>lavoro</b>, trasferendo <b>energia</b>. Se il corpo non deve ruotare (come un osso in equilibrio), i <b>momenti</b> delle forze rispetto al fulcro devono bilanciarsi.
+      </div>
+
+      <h2>1. Le 3 Leggi di Newton e le Forze Fondamentali</h2>
+      <ul>
+        <li><b>1° Principio (Inerzia):</b> se la forza risultante è zero (<span class="math">F<sub>tot</sub> = 0</span>), il corpo resta fermo o prosegue di <b>moto rettilineo uniforme</b>.</li>
+        <li><b>2° Principio:</b> <span class="math"><b>F<sub>tot</sub> = m·a</b></span>. L'unità di misura è il <b>Newton (1 N = 1 kg·m/s²)</b>.</li>
+        <li><b>3° Principio (Azione e Reazione):</b> se A esercita una forza su B, B esercita su A una forza uguale e contraria (agiscono su <i>due corpi diversi</i>!).</li>
+      </ul>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Forza Peso</div>
+          <div class="f-eq">P = m · g</div>
+          <div class="f-note">La massa (kg) è costante ovunque; il peso (N) dipende da <i>g</i> (9,81 m/s²).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Forza d'Attrito Radente</div>
+          <div class="f-eq">F<sub>a</sub> = μ · N</div>
+          <div class="f-note">Sempre opposta al moto. <i>N</i> = forza normale (su piano orizzontale N = mg). μ<sub>statico</sub> &gt; μ<sub>dinamico</sub>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Forza Elastica (Hooke)</div>
+          <div class="f-eq">F<sub>el</sub> = − k · x</div>
+          <div class="f-note"><i>k</i> = costante elastica (N/m); <i>x</i> = allungamento/compressione.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Forza Centripeta</div>
+          <div class="f-eq">F<sub>c</sub> = m · <span class="frac"><span>v²</span><span>R</span></span></div>
+          <div class="f-note">Diretta verso il centro della traiettoria circolare.</div>
+        </div>
+      </div>
+
+      <h2>2. Lavoro, Energia e Potenza</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Lavoro (Joule)</div>
+          <div class="f-eq">W = F · s · cosθ</div>
+          <div class="f-note">1 J = 1 N·m. Se F ⊥ s (θ = 90°) ⇒ <b>W = 0</b>! Se θ = 180° ⇒ W &lt; 0 (lavoro resistente).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Energia Cinetica &amp; Teorema</div>
+          <div class="f-eq">K = ½ m v² &nbsp;|&nbsp; W<sub>tot</sub> = ΔK</div>
+          <div class="f-note">Il lavoro totale di tutte le forze è uguale alla variazione di energia cinetica.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Energia Potenziale</div>
+          <div class="f-eq">U<sub>g</sub> = mgh &nbsp;|&nbsp; U<sub>el</sub> = ½kx²</div>
+          <div class="f-note">Solo per forze <b>conservative</b> (peso, elastica, elettrica). L'attrito NON è conservativo!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Potenza (Watt)</div>
+          <div class="f-eq">P = <span class="frac"><span>W</span><span>t</span></span> = F · v</div>
+          <div class="f-note">1 W = 1 J/s. Misura la <i>rapidità</i> con cui si compie lavoro.</div>
+        </div>
+      </div>
+
+      <div class="box formula">
+        <span class="box-title">Conservazione dell'Energia Meccanica</span>
+        In assenza di attriti: <span class="math"><b>K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub> = costante</b></span>. Se c'è attrito, parte dell'energia meccanica si trasforma in calore (<span class="math">ΔE<sub>mec</sub> = W<sub>attrito</sub> &lt; 0</span>).
+      </div>
+
+      <h2>3. Quantità di Moto, Impulso e Urti</h2>
+      <ul>
+        <li><b>Quantità di moto:</b> <span class="math"><b>p = m·v</b></span> (kg·m/s). <b>Impulso:</b> <span class="math"><b>I = F·Δt = Δp</b></span>.</li>
+        <li>In un sistema isolato (nessuna forza esterna netta) <b>la quantità di moto totale si conserva SEMPRE</b> (sia negli urti elastici che anelastici!).</li>
+        <li><b>Urto elastico:</b> si conservano <i>p</i> ed energia cinetica <i>K</i>. <b>Urto anelastico:</b> si conserva <i>p</i>, ma <i>K</i> diminuisce (nel <i>totalmente anelastico</i> i corpi restano uniti).</li>
+      </ul>
+
+      <h2>4. Statica del Corpo Rigido e Leve nel Corpo Umano</h2>
+      <p>Il <b>momento di una forza</b> (o momento torcente) rispetto a un fulcro è <span class="math"><b>τ = F · b</b></span> (N·m), dove <i>b</i> è il <b>braccio</b> (distanza perpendicolare tra il fulcro e la retta della forza). Un corpo rigido è in equilibrio se: (1) <span class="math">ΣF = 0</span> e (2) <span class="math">Στ = 0</span>.</p>
+      <p>Per una leva in equilibrio vale: <span class="math"><b>F<sub>m</sub> · b<sub>m</sub> = F<sub>r</sub> · b<sub>r</sub></b></span> (Forza motrice × braccio motore = Forza resistente × braccio resistente). È <b>vantaggiosa</b> se <span class="math">b<sub>m</sub> &gt; b<sub>r</sub></span> (basta meno forza), <b>svantaggiosa</b> se <span class="math">b<sub>m</sub> &lt; b<sub>r</sub></span> (ma garantisce grande velocità/ampiezza di movimento!).</p>
+
+      <table>
+        <thead>
+          <tr><th>Tipo di leva</th><th>Posizione centrale</th><th>Vantaggio</th><th>Esempio nel corpo umano</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>1° genere</b></td><td><b>Fulcro (F)</b> in mezzo</td><td>Indifferente (dipende dai bracci)</td><td><b>Articolazione atlo-occipitale</b> (testa che si inclina)</td></tr>
+          <tr><td><b>2° genere</b></td><td><b>Resistenza (R)</b> in mezzo</td><td><b>Sempre vantaggiosa</b> (b<sub>m</sub> &gt; b<sub>r</sub>)</td><td><b>Piede sulle punte</b> (fulcro = dita, R = peso corpo, M = polpaccio)</td></tr>
+          <tr><td><b>3° genere</b></td><td><b>Forza motrice (M)</b> in mezzo</td><td><b>Sempre svantaggiosa</b> (b<sub>m</sub> &lt; b<sub>r</sub>)</td><td><b>Avambraccio / Bicipite brachiale</b> (la più comune nel corpo!)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — Perché il bicipite fa uno sforzo enorme?</span>
+        Nel braccio (leva di <b>3° genere</b>), l'inserzione del bicipite dista solo ~4 cm dal gomito (fulcro), mentre un peso in mano dista ~36 cm (rapporto 1:9). Per tenere in mano un manubrio da 5 kg (≈ 50 N), il bicipite deve esercitare una forza di <b>50 × 9 = 450 N</b>! Svantaggiosa in forza, ma basta una piccola contrazione muscolare per muovere la mano molto velocemente.
+      </div>
+
+      <h2>5. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Newton e Attrito): Una cassa di 10 kg viene spinta orizzontalmente con forza F = 50 N su un pavimento con attrito dinamico μ = 0,2. Calcola l'accelerazione (g = 10 m/s²).</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Forza normale N = mg = 10 · 10 = 100 N. Attrito F<sub>a</sub> = μN = 0,2 · 100 = 20 N. Risultante: F<sub>tot</sub> = 50 − 20 = 30 N. Accelerazione: a = F<sub>tot</sub>/m = 30/10 = <b>3 m/s²</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (Conservazione Energia): Uno sciatore di 70 kg scende da fermo da una pista alta h = 20 m senza attrito. Che velocità raggiunge alla base? (g = 10 m/s²)</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> mgh = ½mv² (la massa si semplifica!). Quindi v = √(2gh) = √(2 · 10 · 20) = √400 = <b>20 m/s</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (Potenza): Una persona di 60 kg sale una rampa di scale alta 5 m in 10 secondi. Qual è la potenza meccanica media sviluppata? (g = 10 m/s²)</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Lavoro contro la gravità: W = mgh = 60 · 10 · 5 = 3000 J. Potenza: P = W/t = 3000 / 10 = <b>300 W</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Leva del bicipite): L'avambraccio regge in mano un peso di 20 N a 30 cm dal gomito. Il bicipite si inserisce a 5 cm dal gomito. Quale forza deve esercitare il bicipite per mantenere l'equilibrio?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> F<sub>m</sub> · b<sub>m</sub> = F<sub>r</sub> · b<sub>r</sub> ⇒ F<sub>m</sub> · 5 cm = 20 N · 30 cm ⇒ F<sub>m</sub> = 600 / 5 = <b>120 N</b>. (Nota: quando le unità dei bracci sono uguali da entrambi i lati, cm si semplifica!)
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>6. Mini-Test di Verifica — Giorno 2 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">1. Un oggetto si muove a velocità costante su un piano orizzontale. Quanto vale la forza risultante agente su di esso?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Dipende dalla velocità</li>
+            <li class="quiz-opt" data-val="b">B) È uguale al peso dell'oggetto</li>
+            <li class="quiz-opt" data-val="c">C) È nulla (0 N)</li>
+            <li class="quiz-opt" data-val="d">D) È proporzionale alla massa</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per il 1° e 2° principio di Newton, velocità costante significa a = 0, dunque <b>F<sub>tot</sub> = m·a = 0</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">2. Una forza centripeta mantiene un corpo in moto circolare uniforme. Quanto lavoro compie durante un giro completo?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 0 J</li>
+            <li class="quiz-opt" data-val="b">B) 2πR · F<sub>c</sub></li>
+            <li class="quiz-opt" data-val="c">C) ½mv²</li>
+            <li class="quiz-opt" data-val="d">D) Dipende dal raggio</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> La forza centripeta è sempre <b>perpendicolare</b> allo spostamento (cos 90° = 0), quindi il suo lavoro è sempre <b>0 J</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">3. Se la velocità di un corpo triplica, la sua energia cinetica:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Triplica</li>
+            <li class="quiz-opt" data-val="b">B) Aumenta di 6 volte</li>
+            <li class="quiz-opt" data-val="c">C) Resta uguale</li>
+            <li class="quiz-opt" data-val="d">D) Aumenta di 9 volte</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> K = ½mv². Se v → 3v, allora K → ½m(3v)² = <b>9K</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">4. In un urto totalmente anelastico tra due corpi isolati, quale grandezza si conserva?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Solo l'energia cinetica</li>
+            <li class="quiz-opt" data-val="b">B) La quantità di moto totale</li>
+            <li class="quiz-opt" data-val="c">C) Sia quantità di moto sia energia cinetica</li>
+            <li class="quiz-opt" data-val="d">D) Nessuna delle due</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Nei sistemi isolati la <b>quantità di moto</b> si conserva sempre; nell'urto anelastico parte dell'energia cinetica si dissipa in deformazione/calore.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">5. L'articolazione del gomito durante la flessione dell'avambraccio (bicipite brachiale) è una leva di:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 1° genere, sempre vantaggiosa</li>
+            <li class="quiz-opt" data-val="b">B) 2° genere, sempre vantaggiosa</li>
+            <li class="quiz-opt" data-val="c">C) 3° genere, sempre svantaggiosa</li>
+            <li class="quiz-opt" data-val="d">D) 3° genere, sempre vantaggiosa</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> La forza motrice (bicipite) si trova tra il fulcro (gomito) e la resistenza (mano) ⇒ leva di <b>3° genere, sempre svantaggiosa</b> in forza.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="200">
+          <div class="quiz-q">6. (Completamento) Una molla con costante elastica k = 400 N/m viene allungata di 0,5 m. Quale forza elastica (in modulo, in N) esercita?</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 150" /> <span>N</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> |F<sub>el</sub>| = k·x = 400 · 0,5 = <b>200 N</b>.</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 2</h2>
+        <ol>
+          <li><b>C</b> (Velocità costante ⇒ a = 0 ⇒ F<sub>tot</sub> = 0 N).</li>
+          <li><b>A</b> (Forza centripeta ⊥ spostamento ⇒ lavoro = 0 J).</li>
+          <li><b>D</b> (K ∝ v² ⇒ 3² = 9 volte).</li>
+          <li><b>B</b> (Quantità di moto totale).</li>
+          <li><b>C</b> (3° genere, sempre svantaggiosa).</li>
+          <li><b>200 N</b> (F = k·x = 400 · 0,5 = 200 N).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-01-metodi-cinematica.html">← Giorno 1</a>
+        <a class="btn" href="giorno-03-meccanica-fluidi.html">Vai al Giorno 3: Meccanica dei Fluidi →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

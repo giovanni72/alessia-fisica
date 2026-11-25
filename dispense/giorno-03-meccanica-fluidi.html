@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 3 — Meccanica dei Fluidi</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-02-dinamica-energia-statica.html">← G2</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-04-termodinamica.html">Giorno 4 →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 3 di 7</span>
+          <span class="badge teal">UD 3 — Meccanica dei Fluidi (1,2 CFU)</span>
+          <span class="badge med">Altissima priorità medica!</span>
+        </div>
+        <h1>Meccanica dei Fluidi: Statici, Ideali e Reali</h1>
+        <p class="subtitle">Il cuore della fisica applicata alla medicina: pressione sanguigna, circolazione, stenosi, alveoli polmonari.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 3</span>
+        Questa è probabilmente l'unità più "medica" del programma. I fluidi (liquidi e gas) si studiano in due casi: <b>fermi (idrostatica)</b> — dove conta solo la profondità e la densità — e <b>in movimento (fluidodinamica)</b> — dove distinguiamo fluidi <i>ideali</i> (senza viscosità: Continuità + Bernoulli) da fluidi <i>reali</i> come il sangue (con viscosità: legge di Poiseuille).
+      </div>
+
+      <h2>1. Densità, Pressione e Unità di Misura</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Densità</div>
+          <div class="f-eq">ρ = <span class="frac"><span>m</span><span>V</span></span></div>
+          <div class="f-note">Acqua: <b>1000 kg/m³</b> = 1 g/cm³. Sangue: ≈ 1050 kg/m³.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Pressione (Scalare!)</div>
+          <div class="f-eq">p = <span class="frac"><span>F<sub>⊥</sub></span><span>S</span></span></div>
+          <div class="f-note">SI: <b>Pascal (1 Pa = 1 N/m²)</b>.<br/>1 atm = 101 325 Pa = <b>760 mmHg</b> = 1,013 bar.</div>
+        </div>
+      </div>
+
+      <h2>2. Idrostatica: Stevino, Pascal, Archimede e Laplace</h2>
+      <ul>
+        <li><b>Legge di Stevino:</b> la pressione in un liquido fermo cresce linearmente con la profondità <i>h</i>: <span class="math"><b>p = p<sub>0</sub> + ρgh</b></span>. Non dipende dalla forma del recipiente! (In acqua, ogni 10 m di profondità la pressione aumenta di ≈ 1 atm).</li>
+        <li><b>Principio di Pascal:</b> una pressione applicata a un fluido incomprimibile si trasmette identica in tutti i punti (<span class="math">F<sub>1</sub>/S<sub>1</sub> = F<sub>2</sub>/S<sub>2</sub></span>). Esempio: torchio idraulico, siringa.</li>
+        <li><b>Principio di Archimede:</b> un corpo immerso riceve una spinta verso l'alto pari al <b>peso del fluido spostato</b>: <span class="math"><b>F<sub>A</sub> = ρ<sub>fluido</sub> · V<sub>imm</sub> · g</b></span>. Il corpo galleggia se <span class="math">ρ<sub>corpo</sub> &lt; ρ<sub>fluido</sub></span> (e la frazione immersa è <span class="math">ρ<sub>corpo</sub> / ρ<sub>fluido</sub></span>).</li>
+        <li><b>Tensione superficiale e Legge di Laplace:</b> la superficie di un liquido si comporta come una membrana elastica (tensione superficiale <span class="math">γ</span>, in N/m). Per una cavità sferica (come un <b>alveolo polmonare</b>) la sovrappressione interna è <span class="math"><b>Δp = 2γ / R</b></span> (per una bolla di sapone con 2 superfici: <span class="math">4γ / R</span>).</li>
+      </ul>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — Alveoli, Surfattante e Sfigmomanometro</span>
+        <ul>
+          <li><b>Alveoli polmonari (Laplace):</b> poiché <span class="math">Δp = 2γ/R</span>, gli alveoli più piccoli avrebbero pressione maggiore e tenderebbero a svuotarsi in quelli più grandi (collasso/atelettasia). Il <b>surfattante polmonare</b> riduce <span class="math">γ</span> (soprattutto negli alveoli piccoli) mantenendoli aperti!</li>
+          <li><b>Pressione sanguigna:</b> si misura a livello del cuore (braccio) perché per Stevino la pressione varia con l'altezza (<span class="math">ρgh</span>: ai piedi in piedi è più alta che alla testa!). Valori normali: <b>120/80 mmHg</b> (pressione relativa rispetto a quella atmosferica).</li>
+        </ul>
+      </div>
+
+      <h2>3. Fluidodinamica: Continuità, Bernoulli e Poiseuille</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Portata &amp; Continuità</div>
+          <div class="f-eq">Q = <span class="frac"><span>ΔV</span><span>Δt</span></span> = S · v = cost.</div>
+          <div class="f-note">S<sub>1</sub>v<sub>1</sub> = S<sub>2</sub>v<sub>2</sub>. Se il raggio si dimezza (S ÷ 4), la velocità <b>quadruplica</b>!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Teorema di Bernoulli (Ideali)</div>
+          <div class="f-eq">p + ½ρv² + ρgh = cost.</div>
+          <div class="f-note">Conservazione dell'energia per unità di volume. A parità di quota: <b>dove v sale, p scende</b> (effetto Venturi).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Legge di Poiseuille (Reali)</div>
+          <div class="f-eq">Q = <span class="frac"><span>π r⁴ Δp</span><span>8 η L</span></span></div>
+          <div class="f-note">Valida per moto <b>laminare</b> di fluidi viscosi (η = viscosità, Pa·s).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Resistenza Idrodinamica</div>
+          <div class="f-eq">R = <span class="frac"><span>Δp</span><span>Q</span></span> = <span class="frac"><span>8 η L</span><span>π r⁴</span></span></div>
+          <div class="f-note">Analoga alla legge di Ohm (Δp = R·Q)! Dipende da <b>1/r⁴</b>!</div>
+        </div>
+      </div>
+
+      <div class="box trap">
+        <span class="box-title">Attenzione — 3 punti che escono spessissimo all'esame</span>
+        <ul>
+          <li><b>Poiseuille e r⁴:</b> se un'arteriola si restringe dimezzando il raggio (<span class="math">r → r/2</span>), la resistenza aumenta di <b>2⁴ = 16 volte</b> (e a parità di Δp la portata cala di 16 volte!).</li>
+          <li><b>Capillari:</b> anche se un singolo capillare è strettissimo, la <b>sezione totale</b> di tutti i capillari in parallelo è enorme ⇒ per continuità, nei capillari il sangue scorre <b>molto lentamente</b> (permettendo gli scambi gassosi!).</li>
+          <li><b>Regime laminare vs turbolento:</b> dipende dal <b>Numero di Reynolds</b> (<span class="math">Re = ρvd/η</span>). Quando <i>Re</i> supera ~2000–3000 il flusso diventa turbolento e rumoroso (es. <b>soffi cardiaci</b> e toni di Korotkoff).</li>
+        </ul>
+      </div>
+
+      <h2>4. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Stevino): Calcola la pressione idrostatica aggiuntiva (rispetto a quella atmosferica) a 20 m di profondità in acqua dolce (ρ = 1000 kg/m³, g = 10 m/s²).</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Δp = ρgh = 1000 · 10 · 20 = 200 000 Pa = <b>2 × 10⁵ Pa ≈ 2 atm</b>. (La pressione <i>assoluta</i> è p<sub>0</sub> + Δp ≈ 3 atm).
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (Archimede): Un blocco di ghiaccio (ρ = 900 kg/m³) galleggia in acqua dolce (ρ = 1000 kg/m³). Quale percentuale del volume è immersa?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> All'equilibrio Peso = Spinta di Archimede: ρ<sub>ghiaccio</sub>·V·g = ρ<sub>acqua</sub>·V<sub>imm</sub>·g ⇒ V<sub>imm</sub>/V = 900/1000 = 0,90 = <b>90%</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (Continuità): In un'arteria di sezione 2 cm² il sangue scorre a 30 cm/s. In un tratto stenotico (ristretto) la sezione scende a 0,5 cm². Qual è la nuova velocità?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> S<sub>1</sub>v<sub>1</sub> = S<sub>2</sub>v<sub>2</sub> ⇒ 2 · 30 = 0,5 · v<sub>2</sub> ⇒ v<sub>2</sub> = 60 / 0,5 = <b>120 cm/s</b> (1,2 m/s). (Le unità si semplificano perché coerenti su entrambi i lati).
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Poiseuille): A causa di una placca aterosclerotica, il raggio interno di un vaso si riduce della metà. Di quanto deve aumentare Δp per mantenere costante la portata Q?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Q = πr⁴Δp/(8ηL). Se r diventa r/2, r⁴ diventa r⁴/16. Per mantenere Q costante, Δp deve aumentare di <b>16 volte</b>!
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>5. Mini-Test di Verifica — Giorno 3 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">1. Secondo il principio di Archimede, la spinta verso l'alto su un corpo completamente immerso dipende da:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) La massa del corpo</li>
+            <li class="quiz-opt" data-val="b">B) La profondità a cui si trova il corpo</li>
+            <li class="quiz-opt" data-val="c">C) La densità del fluido e il volume del corpo</li>
+            <li class="quiz-opt" data-val="d">D) La forma esterna del corpo</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> F<sub>A</sub> = ρ<sub>fluido</sub>·V<sub>imm</sub>·g: dipende solo dalla <b>densità del fluido</b> e dal <b>volume immerso</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">2. In un tubo orizzontale in cui scorre un fluido ideale, se il tubo si restringe (effetto Venturi):</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) La velocità diminuisce e la pressione aumenta</li>
+            <li class="quiz-opt" data-val="b">B) La velocità aumenta e la pressione diminuisce</li>
+            <li class="quiz-opt" data-val="c">C) Aumentano sia velocità sia pressione</li>
+            <li class="quiz-opt" data-val="d">D) La pressione rimane costante</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per continuità la velocità <b>aumenta</b>; per Bernoulli (p + ½ρv² = cost.) la pressione <b>diminuisce</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">3. Qual è la funzione fisica del surfattante polmonare negli alveoli?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Aumentare la viscosità dell'aria</li>
+            <li class="quiz-opt" data-val="b">B) Aumentare la tensione superficiale</li>
+            <li class="quiz-opt" data-val="c">C) Ridurre la pressione atmosferica</li>
+            <li class="quiz-opt" data-val="d">D) Ridurre la tensione superficiale impedendo il collasso alveolare</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per la legge di Laplace (Δp = 2γ/R), abbassare la tensione superficiale γ riduce la pressione necessaria a tenere aperti gli alveoli.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">4. Secondo la legge di Poiseuille, se raddoppia il raggio di un vaso sanguigno (a parità di Δp, L e η), la portata Q:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Aumenta di 16 volte</li>
+            <li class="quiz-opt" data-val="b">B) Raddoppia</li>
+            <li class="quiz-opt" data-val="c">C) Quadruplica</li>
+            <li class="quiz-opt" data-val="d">D) Aumenta di 8 volte</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Q ∝ r⁴. Se r → 2r, allora 2⁴ = <b>16 volte</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">5. Perché il sangue scorre più lentamente nei capillari rispetto all'aorta?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Perché il singolo capillare ha sezione maggiore dell'aorta</li>
+            <li class="quiz-opt" data-val="b">B) Perché la somma delle sezioni di tutti i capillari è molto maggiore di quella dell'aorta</li>
+            <li class="quiz-opt" data-val="c">C) Perché la portata totale nei capillari è minore che nell'aorta</li>
+            <li class="quiz-opt" data-val="d">D) Perché la gravità frena il sangue nei capillari</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> La portata totale Q è la stessa in tutto il circuito; poiché S<sub>tot,capillari</sub> ≫ S<sub>aorta</sub>, per Q = S·v la velocità nei capillari è minima.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="1000">
+          <div class="quiz-q">6. (Completamento) In un torchio idraulico (principio di Pascal), un pistone piccolo di area 2 cm² riceve una forza di 50 N. Quale forza (in N) solleva il pistone grande di area 40 cm²?</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 500" /> <span>N</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> F<sub>1</sub>/S<sub>1</sub> = F<sub>2</sub>/S<sub>2</sub> ⇒ 50/2 = F<sub>2</sub>/40 ⇒ F<sub>2</sub> = 25 · 40 = <b>1000 N</b>.</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 3</h2>
+        <ol>
+          <li><b>C</b> (Densità del fluido e volume immerso).</li>
+          <li><b>B</b> (Velocità aumenta, pressione diminuisce — Venturi/Bernoulli).</li>
+          <li><b>D</b> (Riduce la tensione superficiale γ — legge di Laplace).</li>
+          <li><b>A</b> (2⁴ = 16 volte — Poiseuille).</li>
+          <li><b>B</b> (Sezione complessiva dei capillari molto maggiore).</li>
+          <li><b>1000 N</b> (F<sub>2</sub> = 50 · 40 / 2 = 1000 N).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-02-dinamica-energia-statica.html">← Giorno 2</a>
+        <a class="btn" href="giorno-04-termodinamica.html">Vai al Giorno 4: Termodinamica →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

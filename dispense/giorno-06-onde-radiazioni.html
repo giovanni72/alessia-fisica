@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 6 — Onde Meccaniche e Fisica delle Radiazioni</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-05-elettricita-magnetismo.html">← G5</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-07-simulazione-esame.html">Giorno 7 (Simulazione) →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 6 di 7</span>
+          <span class="badge teal">UD 4 (0,4 CFU) + UD 7 (0,6 CFU)</span>
+          <span class="badge med">Diagnostica per Immagini</span>
+        </div>
+        <h1>Onde Meccaniche, Suono e Fisica delle Radiazioni</h1>
+        <p class="subtitle">Acustica, decibel, effetto Doppler, spettro elettromagnetico, fotoni, decadimento radioattivo e radioprotezione.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 6</span>
+        Un'<b>onda</b> trasporta <b>energia</b> senza trasportare materia. Le <b>onde meccaniche</b> (come il suono e gli ultrasuoni) hanno bisogno di un mezzo (aria, acqua, tessuti); le <b>onde elettromagnetiche</b> (luce, raggi X, raggi γ) viaggiano anche nel vuoto a velocità <span class="math">c = 3×10⁸ m/s</span>. Ad altissima frequenza diventano <b>radiazioni ionizzanti</b>, capaci di strappare elettroni dagli atomi.
+      </div>
+
+      <h2>1. Onde Meccaniche, Suono, Decibel ed Effetto Doppler (UD 4)</h2>
+      <ul>
+        <li><b>Grandezze di un'onda:</b> lunghezza d'onda <span class="math">λ</span> (m), periodo <span class="math">T</span> (s), frequenza <span class="math">f = 1/T</span> (Hz), velocità <span class="math"><b>v = λ · f</b></span>.</li>
+        <li><b>Trasversali vs Longitudinali:</b> nelle <i>trasversali</i> l'oscillazione è perpendicolare alla propagazione (corda, luce); nelle <i>longitudinali</i> è parallela (<b>suono</b>: compressioni e rarefazioni).</li>
+        <li><b>Suono:</b> in aria <span class="math">v ≈ 340 m/s</span> (nei tessuti/acqua è molto più veloce: ~1540 m/s!). Udibile dall'uomo: <b>20 Hz – 20 000 Hz (20 kHz)</b>. Sotto 20 Hz = <i>infrasuoni</i>; sopra 20 kHz = <b>ultrasuoni</b> (ecografia: 1–15 MHz, <b>non ionizzanti</b>!).</li>
+        <li><b>Caratteristiche del suono:</b> <b>Altezza</b> (dipende dalla frequenza <i>f</i>), <b>Intensità</b> (<span class="math">I = P/S</span>, in W/m²), <b>Timbro</b> (forma d'onda/armoniche).</li>
+        <li><b>Effetto Doppler:</b> variazione della frequenza percepita quando sorgente e osservatore sono in moto relativo. Se si <b>avvicinano</b> ⇒ frequenza <b>aumenta</b> (suono più acuto); se si <b>allontanano</b> ⇒ frequenza <b>diminuisce</b>. In medicina: <b>Ecodoppler</b> per misurare la velocità del flusso sanguigno!</li>
+      </ul>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Equazione delle Onde</div>
+          <div class="f-eq">v = λ · f = <span class="frac"><span>λ</span><span>T</span></span></div>
+          <div class="f-note">Cambiando mezzo, la frequenza <b>f resta costante</b>, cambiano v e λ!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Livello Sonoro (Decibel)</div>
+          <div class="f-eq">β = 10 · log<sub>10</sub><span class="frac"><span>I</span><span>I<sub>0</sub></span></span></div>
+          <div class="f-note">I<sub>0</sub> = 10⁻¹² W/m² (soglia uditiva = 0 dB). Soglia del dolore ≈ 120 dB.</div>
+        </div>
+      </div>
+
+      <div class="box trap">
+        <span class="box-title">Regola d'oro dei Decibel (senza calcolatrice!)</span>
+        La scala dei decibel è <b>logaritmica</b>:
+        <ul>
+          <li><b>+10 dB</b> significa intensità moltiplicata per <b>10</b>.</li>
+          <li><b>+20 dB</b> significa intensità moltiplicata per <b>100</b> (10²).</li>
+          <li><b>+30 dB</b> significa intensità moltiplicata per <b>1000</b> (10³).</li>
+          <li><b>+3 dB</b> significa intensità circa <b>raddoppiata (× 2)</b>!</li>
+        </ul>
+      </div>
+
+      <h2>2. Spettro Elettromagnetico e Fotoni (UD 7)</h2>
+      <p>Tutte le onde EM viaggiano nel vuoto a <span class="math">c = 3×10⁸ m/s</span> (<span class="math">c = λ·ν</span>). La luce ha natura sia ondulatoria sia corpuscolare: è composta da <b>fotoni</b> di energia <span class="math"><b>E = h·ν = h·c / λ</b></span> (con <span class="math">h = 6,63×10⁻³⁴ J·s</span>).</p>
+
+      <table>
+        <thead>
+          <tr><th>Banda (da energia/frequenza più BASSA a più ALTA)</th><th>Ionizzante?</th><th>Uso / Nota medica</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Onde Radio → Microonde → Infrarosso (IR)</td><td><b>NO</b></td><td>RMN (onde radio), termografia (IR)</td></tr>
+          <tr><td>Luce Visibile (rosso ~700 nm → violetto ~400 nm)</td><td><b>NO</b></td><td>Endoscopia, laser chirurgici</td></tr>
+          <tr><td>Ultravioletto (UV)</td><td>UV lontani sì</td><td>Sintesi vit. D / danni DNA (melanoma)</td></tr>
+          <tr><td><b>Raggi X</b> (origine: frenamento elettroni)</td><td><b>SÌ</b></td><td>Radiografia (RX), Tomografia (TC)</td></tr>
+          <tr><td><b>Raggi Gamma (γ)</b> (origine: nucleo atomico)</td><td><b>SÌ</b></td><td>Medicina nucleare (scintigrafia, PET), radioterapia</td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Fisica Nucleare e Decadimento Radioattivo</h2>
+      <p>Un nuclide si indica con <span class="math"><sup>A</sup><sub>Z</sub>X</span>, dove <b>Z</b> = numero atomico (protoni) e <b>A</b> = numero di massa (protoni + neutroni). I nuclei instabili decadono spontaneamente emettendo radiazioni:</p>
+
+      <table>
+        <thead>
+          <tr><th>Decadimento</th><th>Cosa emette</th><th>Come cambia Z</th><th>Come cambia A</th><th>Potere penetrante</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Alfa (α)</b></td><td>Nucleo di Elio (<sup>4</sup><sub>2</sub>He)</td><td><b>Z − 2</b></td><td><b>A − 4</b></td><td>Bassissimo (fermato da foglio di carta/pelle), ma molto ionizzante se ingerito!</td></tr>
+          <tr><td><b>Beta meno (β⁻)</b></td><td>Elettrone (e⁻) + antineutrino</td><td><b>Z + 1</b></td><td><b>Invariato</b></td><td>Medio (alluminio / pochi mm di tessuto)</td></tr>
+          <tr><td><b>Beta più (β⁺)</b></td><td>Positrone (e⁺) + neutrino</td><td><b>Z − 1</b></td><td><b>Invariato</b></td><td>Medio (usato nella <b>PET</b>!)</td></tr>
+          <tr><td><b>Gamma (γ)</b></td><td>Fotone ad alta energia</td><td><b>Invariato</b></td><td><b>Invariato</b></td><td><b>Altissimo</b> (servono spessi schermi di piombo/calcestruzzo)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Legge del Decadimento</div>
+          <div class="f-eq">N(t) = N<sub>0</sub> · (½)<sup>t / T<sub>½</sub></sup></div>
+          <div class="f-note"><i>T<sub>½</sub></i> = tempo di dimezzamento (emivita). Anche l'attività A(t) segue la stessa legge!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Unità di Radioattività &amp; Dose</div>
+          <div class="f-eq">1 Bq = 1 decad./s</div>
+          <div class="f-note"><b>Becquerel (Bq)</b> = attività.<br/><b>Gray (Gy)</b> = dose assorbita (J/kg).<br/><b>Sievert (Sv)</b> = dose efficace (rischio biologico).</div>
+        </div>
+      </div>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — Ecografia, RMN, RX/TC, PET</span>
+        Ricorda questa distinzione clinica d'oro: <b>Ecografia</b> (ultrasuoni) e <b>Risonanza Magnetica – RMN</b> (campi magnetici + onde radio) <b>NON usano radiazioni ionizzanti</b>. Invece <b>RX, TC, Scintigrafia e PET</b> usano <b>radiazioni ionizzanti</b> (raggi X o gamma) e richiedono radioprotezione (principio ALARA: tempo minimo, distanza massima, schermatura).
+      </div>
+
+      <h2>4. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Onde): Un'onda sonora in aria (v = 340 m/s) ha frequenza f = 680 Hz. Qual è la sua lunghezza d'onda λ?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> v = λ · f ⇒ λ = v / f = 340 / 680 = <b>0,5 m</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (Decibel): Un rumore passa da 40 dB a 70 dB. Di quante volte è aumentata la sua intensità I?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Δβ = 70 − 40 = 30 dB = 3 × 10 dB. Ogni +10 dB moltiplica I per 10, quindi I aumenta di 10³ = <b>1000 volte</b>!
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (Tempo di dimezzamento): Un radiofarmaco (es. Tecnezio-99m) ha T<sub>½</sub> = 6 ore e attività iniziale di 800 MBq. Quanta attività resta dopo 18 ore?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Numero di dimezzamenti: n = 18 / 6 = 3. Dimezziamo 3 volte: 800 → 400 → 200 → <b>100 MBq</b> (oppure 800 · (½)³ = 800/8 = 100 MBq).
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Decadimento alfa): Il Radio-226 (<sup>226</sup><sub>88</sub>Ra) subisce un decadimento α. Quali sono Z e A del nucleo figlio (Radon)?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Il decadimento α rimuove 2 protoni e 4 nucleoni totali: Z = 88 − 2 = <b>86</b>; A = 226 − 4 = <b>222</b> (<sup>222</sup><sub>86</sub>Rn).
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>5. Mini-Test di Verifica — Giorno 6 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">1. Quale tra le seguenti tecniche di diagnostica per immagini NON utilizza radiazioni ionizzanti?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Tomografia Computerizzata (TC)</li>
+            <li class="quiz-opt" data-val="b">B) Radiografia convenzionale (RX)</li>
+            <li class="quiz-opt" data-val="c">C) Risonanza Magnetica Nucleare (RMN)</li>
+            <li class="quiz-opt" data-val="d">D) PET (Tomografia a Emissione di Positroni)</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> La <b>RMN</b> usa campi magnetici e onde radio (non ionizzanti), così come l'ecografia usa ultrasuoni.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">2. Se un'ambulanza a sirena spiegata si avvicina a un osservatore fermo, la frequenza percepita dall'osservatore è:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Maggiore di quella emessa dalla sirena</li>
+            <li class="quiz-opt" data-val="b">B) Minore di quella emessa dalla sirena</li>
+            <li class="quiz-opt" data-val="c">C) Identica a quella emessa</li>
+            <li class="quiz-opt" data-val="d">D) Nulla</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per l'<b>effetto Doppler</b>, in avvicinamento le creste d'onda si comprimono ⇒ la frequenza percepita <b>aumenta</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">3. Quale tra queste radiazioni elettromagnetiche ha i fotoni di ENERGIA PIÙ ALTA (e lunghezza d'onda più corta)?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Microonde</li>
+            <li class="quiz-opt" data-val="b">B) Luce visibile rossa</li>
+            <li class="quiz-opt" data-val="c">C) Raggi ultravioletti</li>
+            <li class="quiz-opt" data-val="d">D) Raggi gamma</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> E = hν = hc/λ. I <b>raggi gamma (γ)</b> sono all'estremo di massima frequenza e massima energia dello spettro EM.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">4. Nel decadimento beta meno (β⁻), come variano il numero atomico Z e il numero di massa A?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Z diminuisce di 2, A diminuisce di 4</li>
+            <li class="quiz-opt" data-val="b">B) Z aumenta di 1, A resta invariato</li>
+            <li class="quiz-opt" data-val="c">C) Z diminuisce di 1, A resta invariato</li>
+            <li class="quiz-opt" data-val="d">D) Sia Z che A restano invariati</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Nel decadimento β⁻ un neutrone diventa un protone emettendo un elettrone ⇒ <b>Z + 1, A invariato</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">5. Se l'intensità di un suono aumenta di 100 volte, di quanti decibel (dB) aumenta il livello sonoro?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) +100 dB</li>
+            <li class="quiz-opt" data-val="b">B) +10 dB</li>
+            <li class="quiz-opt" data-val="c">C) +20 dB</li>
+            <li class="quiz-opt" data-val="d">D) +2 dB</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Δβ = 10·log<sub>10</sub>(100) = 10 · 2 = <b>+20 dB</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="10">
+          <div class="quiz-q">6. (Completamento) Un campione radioattivo contiene 160 mg di un isotopo con tempo di dimezzamento T<sub>½</sub> = 2 giorni. Quanti milligrammi restano dopo 8 giorni?</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 20" /> <span>mg</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> 8 giorni / 2 giorni = 4 dimezzamenti. 160 → 80 → 40 → 20 → <b>10 mg</b>.</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 6</h2>
+        <ol>
+          <li><b>C</b> (RMN usa onde radio e campi magnetici, non ionizzanti).</li>
+          <li><b>A</b> (Effetto Doppler in avvicinamento ⇒ frequenza maggiore).</li>
+          <li><b>D</b> (Raggi gamma).</li>
+          <li><b>B</b> (Z + 1, A invariato).</li>
+          <li><b>C</b> (+20 dB).</li>
+          <li><b>10 mg</b> (4 dimezzamenti: 160 / 16 = 10 mg).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-05-elettricita-magnetismo.html">← Giorno 5</a>
+        <a class="btn" href="giorno-07-simulazione-esame.html">Vai al Giorno 7: Simulazione 31 Quesiti →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giorno 5 — Elettricità e Magnetismo</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-04-termodinamica.html">← G4</a>
+      <a href="formulario-unico.html">Formulario</a>
+      <a href="giorno-06-onde-radiazioni.html">Giorno 6 →</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Giorno 5 di 7</span>
+          <span class="badge teal">UD 6 — Elettricità e Magnetismo (1,2 CFU)</span>
+          <span class="badge amber">≥ 30% esercizi numerici!</span>
+        </div>
+        <h1>Elettricità, Circuiti, Membrana Cellulare e Magnetismo</h1>
+        <p class="subtitle">Cariche, condensatori, leggi di Ohm, circuiti serie/parallelo, effetto Joule e campi magnetici.</p>
+      </div>
+
+      <div class="box idea">
+        <span class="box-title">L'idea chiave del Giorno 5</span>
+        Pensa alla corrente elettrica esattamente come al flusso d'acqua del Giorno 3! La <b>differenza di potenziale ΔV (Volt)</b> è come il dislivello di pressione; la <b>corrente I (Ampere)</b> è la portata di cariche; la <b>resistenza R (Ohm)</b> è l'attrito del tubo. I <b>condensatori</b> accumulano carica elettrica (proprio come la membrana di un neurone!).
+      </div>
+
+      <h2>1. Elettrostatica: Carica, Coulomb, Campo e Potenziale</h2>
+      <ul>
+        <li><b>Carica elettrica (q):</b> misurata in <b>Coulomb (C)</b>. È quantizzata (multipli di <span class="math">e = 1,6 × 10⁻¹⁹ C</span>) e si conserva. Cariche dello stesso segno si respingono, di segno opposto si attraggono.</li>
+        <li><b>Campo elettrico (E):</b> forza per unità di carica (<span class="math">E = F/q</span>, in N/C o V/m). Esce dalle cariche positive ed entra in quelle negative.</li>
+        <li><b>Potenziale elettrico (V):</b> energia potenziale per unità di carica (<span class="math">V = U/q</span>, in <b>Volt: 1 V = 1 J/C</b>). Il lavoro per spostare una carica <i>q</i> attraverso ΔV è <span class="math"><b>W = q · ΔV</b></span>.</li>
+      </ul>
+
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Legge di Coulomb</div>
+          <div class="f-eq">F = k<sub>e</sub> · <span class="frac"><span>|q<sub>1</sub> · q<sub>2</sub>|</span><span>r²</span></span></div>
+          <div class="f-note">k<sub>e</sub> ≈ 9 × 10⁹ N·m²/C². Se la distanza raddoppia, F diventa <b>1/4</b>!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Campo uniforme &amp; Lavoro</div>
+          <div class="f-eq">E = <span class="frac"><span>ΔV</span><span>d</span></span> &nbsp;|&nbsp; W = q·ΔV</div>
+          <div class="f-note">Tra due armature parallele a distanza <i>d</i>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Condensatore Piano</div>
+          <div class="f-eq">C = <span class="frac"><span>Q</span><span>ΔV</span></span> = ε<sub>0</sub>ε<sub>r</sub> <span class="frac"><span>S</span><span>d</span></span></div>
+          <div class="f-note">Unità: <b>Farad (F = C/V)</b>. Energia immagazzinata: <b>U = ½ C (ΔV)²</b>.</div>
+        </div>
+      </div>
+
+      <div class="box med">
+        <span class="box-title">Focus Biomedico — La membrana cellulare come condensatore</span>
+        Il doppio strato fosfolipidico (isolante, spessore <span class="math">d ≈ 7 nm</span>) separa due soluzioni conduttrici (citoplasma e liquido extracellulare): è a tutti gli effetti un <b>condensatore piano</b>! A riposo ha un potenziale di circa <b>−70 mV</b> (interno negativo). Nonostante 70 mV sembri piccolo, essendo <i>d</i> piccolissimo, il campo elettrico attraverso la membrana è gigantesco: <span class="math">E = 0,07 / (7×10⁻⁹) = <b>10⁷ V/m</b></span>!
+      </div>
+
+      <h2>2. Corrente Continua, Leggi di Ohm e Circuiti</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Intensità di Corrente</div>
+          <div class="f-eq">I = <span class="frac"><span>ΔQ</span><span>Δt</span></span></div>
+          <div class="f-note">1 Ampere (A) = 1 C/s. Per convenzione va dal polo + al polo −.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">1ª e 2ª Legge di Ohm</div>
+          <div class="f-eq">ΔV = R · I &nbsp;|&nbsp; R = ρ <span class="frac"><span>L</span><span>S</span></span></div>
+          <div class="f-note">R in Ohm (Ω). ρ = resistività del materiale. Filo più lungo ⇒ più R; più spesso ⇒ meno R.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Potenza &amp; Effetto Joule</div>
+          <div class="f-eq">P = ΔV·I = R·I² = <span class="frac"><span>(ΔV)²</span><span>R</span></span></div>
+          <div class="f-note">Unità: Watt (W). Calore dissipato in un tempo <i>t</i>: <b>E = P·t = R·I²·t</b> (J).</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Collegamento</th><th>Resistenze (R)</th><th>Condensatori (C)</th><th>Cosa è uguale?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>In SERIE</b></td>
+            <td><b>R<sub>eq</sub> = R<sub>1</sub> + R<sub>2</sub></b> (aumenta!)</td>
+            <td><b>1/C<sub>eq</sub> = 1/C<sub>1</sub> + 1/C<sub>2</sub></b> (diminuisce!)</td>
+            <td>Stessa corrente <b>I</b> (o stessa carica <b>Q</b>)</td>
+          </tr>
+          <tr>
+            <td><b>In PARALLELO</b></td>
+            <td><b>1/R<sub>eq</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub></b> (diminuisce!)</td>
+            <td><b>C<sub>eq</sub> = C<sub>1</sub> + C<sub>2</sub></b> (aumenta!)</td>
+            <td>Stessa differenza di potenziale <b>ΔV</b></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="box trap">
+        <span class="box-title">Trucco salva-tempo per 2 resistenze in parallelo</span>
+        Invece di fare le frazioni, usa sempre: <span class="math"><b>R<sub>eq</sub> = (R<sub>1</sub> · R<sub>2</sub>) / (R<sub>1</sub> + R<sub>2</sub>)</b></span>! E se hai <i>N</i> resistenze uguali di valore <i>R</i> in parallelo, semplicemente <span class="math"><b>R<sub>eq</sub> = R / N</b></span> (es. due resistenze da 10 Ω in parallelo danno 5 Ω). Nota che per i condensatori le formule serie/parallelo sono <b>esattamente opposte</b>!
+      </div>
+
+      <h2>3. Magnetismo e Induzione Elettromagnetica</h2>
+      <ul>
+        <li><b>Campo magnetico (B):</b> si misura in <b>Tesla (T)</b>. I poli magnetici Nord e Sud sono inseparabili (non esistono monopoli magnetici). Le correnti elettriche generano campi magnetici (es. filo rettilineo, bobine della <b>Risonanza Magnetica – RMN</b>, che usa campi da 1,5–3 T!).</li>
+        <li><b>Forza di Lorentz:</b> su una carica <i>q</i> in movimento con velocità <i>v</i> in un campo <i>B</i>: <span class="math"><b>F = q · v · B · sinθ</b></span>. Se la carica è ferma (v = 0) o parallela a B (θ = 0°), <b>F = 0</b>! Poiché F è sempre perpendicolare a <i>v</i>, <b>la forza magnetica NON compie lavoro</b> (curva la traiettoria ma non cambia il modulo della velocità).</li>
+        <li><b>Forza su un filo percorso da corrente:</b> <span class="math"><b>F = I · L · B · sinθ</b></span>.</li>
+        <li><b>Induzione elettromagnetica (Faraday-Neumann-Lenz):</b> una <b>variazione</b> nel tempo del flusso del campo magnetico genera una forza elettromotrice indotta: <span class="math"><b>f.e.m. = − ΔΦ(B) / Δt</b></span>. Il segno meno (legge di Lenz) indica che la corrente indotta si oppone alla variazione che l'ha generata.</li>
+      </ul>
+
+      <h2>4. Esercizi svolti passo-passo</h2>
+
+      <div class="example">
+        <div class="example-q">Esempio 1 (Legge di Coulomb): Due cariche si respingono con una forza di 36 N a una certa distanza d. Se la distanza viene triplicata (3d), quanto vale la nuova forza?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> F ∝ 1/r². Se r → 3r, la forza si divide per 3² = 9. Quindi F<sub>nuova</sub> = 36 / 9 = <b>4 N</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 2 (Circuiti): Due resistenze R<sub>1</sub> = 6 Ω e R<sub>2</sub> = 3 Ω sono collegate in parallelo a una batteria da 12 V. Calcola la resistenza equivalente R<sub>eq</sub> e la corrente totale I.</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> R<sub>eq</sub> = (6 · 3)/(6 + 3) = 18/9 = <b>2 Ω</b>. Per la 1ª legge di Ohm: I = ΔV / R<sub>eq</sub> = 12 / 2 = <b>6 A</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 3 (Effetto Joule): Un elettrobisturi assorbe 2 A sotto una tensione di 100 V per 5 secondi. Quale potenza sviluppa e quanta energia termica libera?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> P = ΔV · I = 100 · 2 = <b>200 W</b>. Energia: E = P · t = 200 · 5 = <b>1000 J (1 kJ)</b>.
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example-q">Esempio 4 (Condensatore): Un condensatore da 4 μF viene caricato a 10 V. Quale carica Q accumula sulle armature?</div>
+        <div class="example-sol">
+          <b>Svolgimento:</b> Q = C · ΔV = (4 × 10⁻⁶ F) · 10 V = 4 × 10⁻⁵ C = <b>40 μC</b>.
+        </div>
+      </div>
+
+      <section class="quiz-section">
+        <h2>5. Mini-Test di Verifica — Giorno 5 (6 quesiti)</h2>
+
+        <div class="quiz-card" data-type="mc" data-answer="a">
+          <div class="quiz-q">1. Tre resistenze uguali da 12 Ω ciascuna sono collegate in PARALLELO. Quanto vale la resistenza equivalente?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 4 Ω</li>
+            <li class="quiz-opt" data-val="b">B) 36 Ω</li>
+            <li class="quiz-opt" data-val="c">C) 6 Ω</li>
+            <li class="quiz-opt" data-val="d">D) 12 Ω</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> N resistenze uguali in parallelo danno R<sub>eq</sub> = R/N = 12/3 = <b>4 Ω</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="c">
+          <div class="quiz-q">2. Due condensatori da 4 μF e 6 μF sono collegati in PARALLELO. Quanto vale la capacità equivalente?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) 2,4 μF</li>
+            <li class="quiz-opt" data-val="b">B) 5 μF</li>
+            <li class="quiz-opt" data-val="c">C) 10 μF</li>
+            <li class="quiz-opt" data-val="d">D) 24 μF</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per i condensatori in <b>parallelo</b> le capacità si sommano: C<sub>eq</sub> = 4 + 6 = <b>10 μF</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">3. Un filo conduttore viene allungato fino a raddoppiare la sua lunghezza L, mantenendo uguale la sezione S. La sua resistenza R:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Si dimezza</li>
+            <li class="quiz-opt" data-val="b">B) Raddoppia</li>
+            <li class="quiz-opt" data-val="c">C) Quadruplica</li>
+            <li class="quiz-opt" data-val="d">D) Resta invariata</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Per la 2ª legge di Ohm (R = ρL/S), R è direttamente proporzionale a L ⇒ <b>raddoppia</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="d">
+          <div class="quiz-q">4. Una carica elettrica entra in un campo magnetico uniforme B con velocità v perpendicolare a B. Quanto lavoro compie la forza di Lorentz sulla carica?</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) q·v·B</li>
+            <li class="quiz-opt" data-val="b">B) ½mv²</li>
+            <li class="quiz-opt" data-val="c">C) Dipende dal raggio dell'orbita</li>
+            <li class="quiz-opt" data-val="d">D) Sempre nullo (0 J)</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> La forza di Lorentz è sempre perpendicolare alla velocità (e quindi allo spostamento), perciò compie lavoro <b>nullo</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="mc" data-answer="b">
+          <div class="quiz-q">5. Nel modello elettrico della membrana cellulare, il doppio strato lipidico si comporta principalmente come:</div>
+          <ul class="quiz-options">
+            <li class="quiz-opt" data-val="a">A) Un generatore di corrente magnetica</li>
+            <li class="quiz-opt" data-val="b">B) Un condensatore (dielettrico isolante tra due soluzioni conduttrici)</li>
+            <li class="quiz-opt" data-val="c">C) Un superconduttore a resistenza zero</li>
+            <li class="quiz-opt" data-val="d">D) Un solenoide</li>
+          </ul>
+          <div class="quiz-exp"><b>Spiegazione:</b> Il doppio strato lipidico è un isolante sottilissimo tra due soluzioni ioniche conduttrici ⇒ forma un <b>condensatore piano</b>.</div>
+        </div>
+
+        <div class="quiz-card" data-type="fill" data-answer="50">
+          <div class="quiz-q">6. (Completamento) Una resistenza da 2 Ω è attraversata da una corrente costante di 5 A. Quanti Watt (W) di potenza dissipa per effetto Joule?</div>
+          <div class="quiz-fill">
+            <input type="text" placeholder="Es. 20" /> <span>W</span>
+          </div>
+          <div class="quiz-exp"><b>Spiegazione:</b> P = R · I² = 2 · 5² = 2 · 25 = <b>50 W</b>.</div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-check-quiz" class="btn teal">Verifica risposte</button>
+          <button id="btn-reveal-quiz" class="btn outline">Mostra/Nascondi spiegazioni</button>
+          <button id="btn-reset-quiz" class="btn outline">Ricomincia</button>
+        </div>
+        <div id="score-banner" class="score-banner"></div>
+      </section>
+
+      <section class="print-answers">
+        <h2>Soluzioni Mini-Test — Giorno 5</h2>
+        <ol>
+          <li><b>A</b> (12 / 3 = 4 Ω).</li>
+          <li><b>C</b> (Condensatori in parallelo: 4 + 6 = 10 μF).</li>
+          <li><b>B</b> (R = ρL/S ⇒ raddoppia).</li>
+          <li><b>D</b> (La forza di Lorentz è ⊥ a v ⇒ lavoro = 0 J).</li>
+          <li><b>B</b> (Condensatore piano).</li>
+          <li><b>50 W</b> (P = R·I² = 2 · 25 = 50 W).</li>
+        </ol>
+      </section>
+
+      <div class="day-footer">
+        <a class="btn outline" href="giorno-04-termodinamica.html">← Giorno 4</a>
+        <a class="btn" href="giorno-06-onde-radiazioni.html">Vai al Giorno 6: Onde e Radiazioni →</a>
+      </div>
+    </article>
+  </main>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario Unico — Fisica Semestre Filtro Medicina</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../index.html">← Dashboard 7 Giorni</a>
+    <nav class="topbar-nav">
+      <a href="giorno-01-metodi-cinematica.html">G1</a>
+      <a href="giorno-02-dinamica-energia-statica.html">G2</a>
+      <a href="giorno-03-meccanica-fluidi.html">G3</a>
+      <a href="giorno-04-termodinamica.html">G4</a>
+      <a href="giorno-05-elettricita-magnetismo.html">G5</a>
+      <a href="giorno-06-onde-radiazioni.html">G6</a>
+      <a href="giorno-07-simulazione-esame.html">Simulazione</a>
+      <button class="btn-print" onclick="window.print()">Stampa / PDF</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="sheet">
+      <div class="doc-header">
+        <div class="badge-row">
+          <span class="badge">Formulario Unico Tascabile</span>
+          <span class="badge teal">Syllabus MUR 6 CFU</span>
+          <span class="badge amber">Da tenere sempre sotto mano</span>
+        </div>
+        <h1>Formulario Essenziale di Fisica (UD 1 – UD 7)</h1>
+        <p class="subtitle">Tutte le formule d'oro, costanti fisiche e conversioni trabocchetto per il Semestre Filtro di Medicina.</p>
+      </div>
+
+      <h2>Costanti fisiche e conversioni da sapere a memoria</h2>
+      <table>
+        <thead>
+          <tr><th>Costante / Conversione</th><th>Valore</th><th>Dove si usa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Accelerazione di gravità (<i>g</i>)</td><td><b>9,81 m/s²</b> (≈ 10 m/s² a mente)</td><td>Peso, caduta libera, Stevino, energia potenziale</td></tr>
+          <tr><td>Costante universale dei gas (<i>R</i>)</td><td><b>8,314 J/(mol·K)</b> = 0,0821 L·atm/(mol·K)</td><td>Gas perfetti (<i>PV = nRT</i>)</td></tr>
+          <tr><td>Numero di Avogadro (<i>N</i><sub>A</sub>)</td><td><b>6,022 × 10²³ mol⁻¹</b></td><td>Moli e particelle</td></tr>
+          <tr><td>Costante di Coulomb (<i>k</i><sub>e</sub>)</td><td><b>8,99 × 10⁹ N·m²/C²</b> (≈ 9 × 10⁹)</td><td>Forza e campo elettrico</td></tr>
+          <tr><td>Carica elementare (<i>e</i>)</td><td><b>1,6 × 10⁻¹⁹ C</b></td><td>Elettroni, protoni, 1 eV = 1,6 × 10⁻¹⁹ J</td></tr>
+          <tr><td>Velocità della luce nel vuoto (<i>c</i>)</td><td><b>3,0 × 10⁸ m/s</b></td><td>Onde EM, fotoni</td></tr>
+          <tr><td>Costante di Planck (<i>h</i>)</td><td><b>6,63 × 10⁻³⁴ J·s</b></td><td>Energia dei fotoni (<i>E = hν</i>)</td></tr>
+          <tr><td>Soglia uditiva (<i>I</i><sub>0</sub>)</td><td><b>10⁻¹² W/m²</b></td><td>Livello sonoro in decibel (dB)</td></tr>
+          <tr><td><b>Conversioni trabocchetto</b></td><td colspan="2">
+            <b>km/h → m/s</b>: dividi per <b>3,6</b> &nbsp;|&nbsp;
+            <b>1 L</b> = 1 dm³ = <b>10⁻³ m³</b> &nbsp;|&nbsp;
+            <b>1 cm³</b> = <b>10⁻⁶ m³</b> = 1 mL<br/>
+            <b>1 g/cm³</b> = <b>1000 kg/m³</b> (acqua) &nbsp;|&nbsp;
+            <b>1 atm</b> = <b>101 325 Pa</b> ≈ 10⁵ Pa = <b>760 mmHg</b><br/>
+            <b>1 cal</b> = <b>4,186 J</b> &nbsp;|&nbsp;
+            <b>T(K)</b> = t(°C) + <b>273,15</b> (ma ΔT in K = Δt in °C!)
+          </td></tr>
+        </tbody>
+      </table>
+
+      <h2>UD 1 &amp; UD 2 — Vettori, Cinematica, Dinamica, Energia, Statica</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Scomposizione vettore</div>
+          <div class="f-eq">v<sub>x</sub> = v·cosθ &nbsp;|&nbsp; v<sub>y</sub> = v·sinθ</div>
+          <div class="f-note">Modulo: v = √(v<sub>x</sub>² + v<sub>y</sub>²). Prodotto scalare: A·B·cosθ.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">MRU &amp; MRUA</div>
+          <div class="f-eq">s = s<sub>0</sub> + v<sub>0</sub>t + ½at²</div>
+          <div class="f-note">v = v<sub>0</sub> + at &nbsp;|&nbsp; v² = v<sub>0</sub>² + 2aΔs (senza tempo!).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Moto Circolare &amp; Armonico</div>
+          <div class="f-eq">a<sub>c</sub> = v²/R = ω²R</div>
+          <div class="f-note">ω = 2π/T = 2πf &nbsp;|&nbsp; v = ωR &nbsp;|&nbsp; T = 1/f.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">2° Principio &amp; Forze</div>
+          <div class="f-eq">F<sub>tot</sub> = m·a</div>
+          <div class="f-note">P = mg &nbsp;|&nbsp; F<sub>attr</sub> = μN &nbsp;|&nbsp; F<sub>el</sub> = −kx.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Lavoro, Energia, Potenza</div>
+          <div class="f-eq">W = F·s·cosθ = ΔK</div>
+          <div class="f-note">K = ½mv² &nbsp;|&nbsp; U<sub>g</sub> = mgh &nbsp;|&nbsp; U<sub>el</sub> = ½kx² &nbsp;|&nbsp; P = W/t = Fv.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Quantità di moto &amp; Leve</div>
+          <div class="f-eq">p = m·v &nbsp;|&nbsp; τ = F·b</div>
+          <div class="f-note">Impulso: FΔt = Δp. Equilibrio leva: F<sub>m</sub>·b<sub>m</sub> = F<sub>r</sub>·b<sub>r</sub>.</div>
+        </div>
+      </div>
+
+      <h2>UD 3 — Meccanica dei Fluidi (Fondamentale per Medicina)</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Densità &amp; Pressione</div>
+          <div class="f-eq">ρ = m/V &nbsp;|&nbsp; p = F/S</div>
+          <div class="f-note">SI: ρ in kg/m³, p in Pa (N/m²).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Stevino &amp; Archimede</div>
+          <div class="f-eq">p = p<sub>0</sub> + ρgh</div>
+          <div class="f-note">Spinta di Archimede: F<sub>A</sub> = ρ<sub>fluido</sub>·V<sub>imm</sub>·g.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Continuità (Portata)</div>
+          <div class="f-eq">Q = S·v = costante</div>
+          <div class="f-note">S<sub>1</sub>v<sub>1</sub> = S<sub>2</sub>v<sub>2</sub>. Se il vaso si restringe, v aumenta!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Teorema di Bernoulli</div>
+          <div class="f-eq">p + ½ρv² + ρgh = cost.</div>
+          <div class="f-note">Fluidi ideali: dove v aumenta, la pressione p diminuisce.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Legge di Poiseuille</div>
+          <div class="f-eq">Q = <span class="frac"><span>π r⁴ Δp</span><span>8 η L</span></span></div>
+          <div class="f-note">Resistenza R = 8ηL/(πr⁴). Raggio dimezzato ⇒ R × 16!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Laplace (Alveoli)</div>
+          <div class="f-eq">Δp = <span class="frac"><span>2γ</span><span>R</span></span> (sfera)</div>
+          <div class="f-note">Il surfattante riduce γ e impedisce il collasso alveolare.</div>
+        </div>
+      </div>
+
+      <h2>UD 5 — Termodinamica</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Calore &amp; Passaggi di stato</div>
+          <div class="f-eq">Q = m·c·ΔT &nbsp;|&nbsp; Q = m·L</div>
+          <div class="f-note">Acqua: c = 4186 J/(kg·K) = 1 cal/(g·°C).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Equazione Gas Perfetti</div>
+          <div class="f-eq">P·V = n·R·T</div>
+          <div class="f-note">T SEMPRE in Kelvin! P<sub>1</sub>V<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>/T<sub>2</sub>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">1° Principio &amp; Lavoro</div>
+          <div class="f-eq">ΔU = Q − W</div>
+          <div class="f-note">Isobara: W = PΔV. Isocora: W = 0. Isoterma: ΔU = 0. Adiabatica: Q = 0.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Rendimento &amp; Entropia</div>
+          <div class="f-eq">η = 1 − <span class="frac"><span>T<sub>C</sub></span><span>T<sub>H</sub></span></span> &nbsp;|&nbsp; ΔS = <span class="frac"><span>Q<sub>rev</sub></span><span>T</span></span></div>
+          <div class="f-note">T<sub>C</sub> (fredda) e T<sub>H</sub> (calda) sempre in Kelvin.</div>
+        </div>
+      </div>
+
+      <h2>UD 6 — Elettricità e Magnetismo</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Coulomb &amp; Campo Elettrico</div>
+          <div class="f-eq">F = k<sub>e</sub> <span class="frac"><span>|q<sub>1</sub>q<sub>2</sub>|</span><span>r²</span></span> &nbsp;|&nbsp; E = <span class="frac"><span>F</span><span>q</span></span></div>
+          <div class="f-note">Campo uniforme: E = ΔV/d. Lavoro: W = qΔV.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Condensatori (Membrana)</div>
+          <div class="f-eq">C = <span class="frac"><span>Q</span><span>ΔV</span></span> = ε<sub>0</sub>ε<sub>r</sub> <span class="frac"><span>S</span><span>d</span></span></div>
+          <div class="f-note">U = ½C(ΔV)². Parallelo: C<sub>eq</sub> = C<sub>1</sub>+C<sub>2</sub>. Serie: 1/C<sub>eq</sub> = 1/C<sub>1</sub>+1/C<sub>2</sub>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Leggi di Ohm</div>
+          <div class="f-eq">ΔV = R·I &nbsp;|&nbsp; R = ρ <span class="frac"><span>L</span><span>S</span></span></div>
+          <div class="f-note">I = ΔQ/Δt (Ampere). Serie: R<sub>eq</sub> = R<sub>1</sub>+R<sub>2</sub>. Parallelo: 1/R<sub>eq</sub> = 1/R<sub>1</sub>+1/R<sub>2</sub>.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Potenza &amp; Effetto Joule</div>
+          <div class="f-eq">P = ΔV·I = R·I² = (ΔV)²/R</div>
+          <div class="f-note">Energia dissipata in calore: E = P·t (in Joule).</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Forza di Lorentz</div>
+          <div class="f-eq">F = q·v·B·sinθ</div>
+          <div class="f-note">Su filo: F = I·L·B·sinθ. Non compie lavoro (⊥ a v)!</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Induzione (Faraday-Lenz)</div>
+          <div class="f-eq">f.e.m. = − ΔΦ(B) / Δt</div>
+          <div class="f-note">Solo un flusso magnetico <i>variabile</i> genera corrente indotta.</div>
+        </div>
+      </div>
+
+      <h2>UD 4 &amp; UD 7 — Onde, Suono, Fotoni e Radioattività</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="f-name">Onde &amp; Luce</div>
+          <div class="f-eq">v = λ·f &nbsp;|&nbsp; c = λ·ν</div>
+          <div class="f-note">T = 1/f. Nel vuoto c = 3×10⁸ m/s; suono in aria ≈ 340 m/s.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Livello Sonoro (dB)</div>
+          <div class="f-eq">β = 10·log<sub>10</sub>(I / I<sub>0</sub>)</div>
+          <div class="f-note">+10 dB ⇒ I × 10 &nbsp;|&nbsp; +20 dB ⇒ I × 100 &nbsp;|&nbsp; +3 dB ⇒ I × 2.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Energia dei Fotoni</div>
+          <div class="f-eq">E = h·ν = h·c / λ</div>
+          <div class="f-note">Frequenza più alta (o λ più corta) ⇒ fotone più energetico.</div>
+        </div>
+        <div class="formula-card">
+          <div class="f-name">Decadimento Radioattivo</div>
+          <div class="f-eq">N(t) = N<sub>0</sub> · (½)<sup>t / T<sub>½</sub></sup></div>
+          <div class="f-note">α: Z−2, A−4 &nbsp;|&nbsp; β⁻: Z+1, A= &nbsp;|&nbsp; β⁺: Z−1, A= &nbsp;|&nbsp; γ: Z=, A=.</div>
+        </div>
+      </div>
+
+      <div class="box trap">
+        <span class="box-title">Checklist lampo — 5 errori da NON fare mai all'esame</span>
+        <ul>
+          <li>Usare <b>°C invece di K</b> in <i>PV = nRT</i> o nel rendimento di Carnot.</li>
+          <li>Dimenticare che <b>1 cm³ = 10⁻⁶ m³</b> (non 10⁻²!) e <b>1 cm² = 10⁻⁴ m²</b>.</li>
+          <li>Scambiare le formule serie/parallelo tra <b>resistenze</b> e <b>condensatori</b> (sono opposte!).</li>
+          <li>Dimenticare la <b>quarta potenza del raggio (r⁴)</b> nella legge di Poiseuille.</li>
+          <li>Confondere <b>potenza (W = J/s)</b> con <b>energia/lavoro (J)</b>.</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
